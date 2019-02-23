@@ -20,6 +20,14 @@
       },
       "doc5": {
         "title": "Fifth Document"
+      },
+      "introduction/getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
+      "introduction/motivation": {
+        "title": "Motivation",
+        "sidebar_label": "Motivation"
       }
     },
     "links": {
@@ -29,7 +37,7 @@
       "Blog": "Blog"
     },
     "categories": {
-      "Docusaurus": "Docusaurus",
+      "Introduction": "Introduction",
       "First Category": "First Category",
       "Second Category": "Second Category"
     }
