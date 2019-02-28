@@ -1,6 +1,10 @@
 {
   "docs": {
-    "Introduction": ["introduction/getting-started", "introduction/motivation"],
+    "Introduction": [
+      "introduction/getting-started",
+      "introduction/motivation",
+      "introduction/examples"
+    ],
     "First Category": ["doc2"],
     "Second Category": ["doc3"]
   },
