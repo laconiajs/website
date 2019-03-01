@@ -21,6 +21,14 @@
       "doc5": {
         "title": "Fifth Document"
       },
+      "introduction/core-concepts": {
+        "title": "Core Concepts",
+        "sidebar_label": "Core Concepts"
+      },
+      "introduction/examples": {
+        "title": "Examples",
+        "sidebar_label": "Examples"
+      },
       "introduction/getting-started": {
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
@@ -28,6 +36,22 @@
       "introduction/motivation": {
         "title": "Motivation",
         "sidebar_label": "Motivation"
+      },
+      "vs/claudia": {
+        "title": "Laconia vs. Claudia",
+        "sidebar_label": "Claudia"
+      },
+      "vs/express": {
+        "title": "Laconia vs. Express, Koa, Hapi, etc.",
+        "sidebar_label": "Express, Koa, Hapi, etc."
+      },
+      "vs/middy": {
+        "title": "Laconia vs. Middy",
+        "sidebar_label": "Middy"
+      },
+      "vs/serverless-sam": {
+        "title": "Laconia vs. Serverless Framework, SAM, Apex, etc.",
+        "sidebar_label": "Serverless, SAM, Apex, etc."
       }
     },
     "links": {
@@ -38,8 +62,9 @@
     },
     "categories": {
       "Introduction": "Introduction",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "Laconia vs. Other": "Laconia vs. Other",
+      "Second Category": "Second Category",
+      "First Category": "First Category"
     }
   },
   "pages-strings": {

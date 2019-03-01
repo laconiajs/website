@@ -3,9 +3,15 @@
     "Introduction": [
       "introduction/getting-started",
       "introduction/motivation",
+      "introduciton/core-concepts",
       "introduction/examples"
     ],
-    "First Category": ["doc2"],
+    "Laconia vs. Other": [
+      "vs/claudia",
+      "vs/express-koa",
+      "vs/middy",
+      "vs/serverless-sam"
+    ],
     "Second Category": ["doc3"]
   },
   "docs-other": {
