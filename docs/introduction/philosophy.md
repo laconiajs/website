@@ -46,7 +46,7 @@ When you learn about a framework, it’s important to know not only what it does
 
 - Set high standards for code quality.
 
-* API Program close to programming language
+* API Program close to programming language, higher level abstraction
 
   - Check zeit
   - Cleanest API is when it's close to programming language
@@ -54,3 +54,5 @@ When you learn about a framework, it’s important to know not only what it does
   - No middleware as a framework
   - Middleware as decorator function.
   - Waiting for pipe
+  - invoker stack trace
+  - invoker good ux
