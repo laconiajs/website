@@ -4,6 +4,14 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-Check the [documentation](https://docusaurus.io) for how to use Docusaurus.
+Take from main README.md
 
-## Lorem
+# installation
+
+# Basic example
+
+Your app is your central, blah blah
+
+# Next
+
+Check out guides on the side bar

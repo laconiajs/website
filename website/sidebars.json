@@ -5,7 +5,9 @@
       "introduction/motivation",
       "introduciton/core-concepts",
       "introduciton/philosophy",
-      "introduction/examples"
+      "introduction/examples",
+      "introduction/faq",
+      "introduction/support-me"
     ],
     "Laconia vs. Other": [
       "vs/claudia",
@@ -13,9 +15,27 @@
       "vs/middy",
       "vs/serverless-sam"
     ],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Guides": [
+      "guides/injecting-dependencies",
+      "guides/converting-aws-event",
+      "guides/converting-apigateway-event",
+      "guides/retrieving-secrets",
+      "guides/retrieving-config",
+      "guides/warming-up",
+      "guides/invoking-other-lambdas",
+      "guides/long-running-tasks",
+      "guides/creating-custom-adapter",
+      "guides/creating-custom-middleware"
+    ],
+    "API Reference": [
+      "api/core",
+      "api/adapter",
+      "api/adapter-api",
+      "api/invoker",
+      "api/config",
+      "api/batch",
+      "api/middleware-lambda-warmer",
+      "api/middleware-serverless-plugin-warmup"
+    ]
   }
 }

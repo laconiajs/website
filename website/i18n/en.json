@@ -5,21 +5,57 @@
     "previous": "Previous",
     "tagline": "A website for testing",
     "docs": {
-      "doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Example Page"
+      "api/adapter-api": {
+        "title": "api/adapter-api"
       },
-      "doc2": {
-        "title": "document number 2"
+      "api/adapter": {
+        "title": "api/adapter"
       },
-      "doc3": {
-        "title": "This is document number 3"
+      "api/batch": {
+        "title": "api/batch"
       },
-      "doc4": {
-        "title": "Other Document"
+      "api/config": {
+        "title": "api/config"
       },
-      "doc5": {
-        "title": "Fifth Document"
+      "api/core": {
+        "title": "api/core"
+      },
+      "api/invoker": {
+        "title": "api/invoker"
+      },
+      "api/middleware-lambda-warmer": {
+        "title": "api/middleware-lambda-warmer"
+      },
+      "api/middleware-serverless-plugin-warmup": {
+        "title": "api/middleware-serverless-plugin-warmup"
+      },
+      "guides/converting-apigateway-events": {
+        "title": "guides/converting-apigateway-events"
+      },
+      "guides/converting-events": {
+        "title": "guides/converting-events"
+      },
+      "guides/creating-custom-adapter": {
+        "title": "guides/creating-custom-adapter"
+      },
+      "guides/injecting-dependencies": {
+        "title": "guides/injecting-dependencies"
+      },
+      "guides/invoking-other-lambdas": {
+        "title": "Invoking Other Lambdas",
+        "sidebar_label": "Invoking Other Lambdas"
+      },
+      "guides/long-running-tasks": {
+        "title": "guides/long-running-tasks"
+      },
+      "guides/retrieving-config": {
+        "title": "guides/retrieving-config"
+      },
+      "guides/retrieving-secrets": {
+        "title": "guides/retrieving-secrets"
+      },
+      "guides/warming-up": {
+        "title": "guides/warming-up"
       },
       "introduction/core-concepts": {
         "title": "Core Concepts",
@@ -29,6 +65,9 @@
         "title": "Examples",
         "sidebar_label": "Examples"
       },
+      "introduction/faq": {
+        "title": "introduction/faq"
+      },
       "introduction/getting-started": {
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
@@ -36,6 +75,13 @@
       "introduction/motivation": {
         "title": "Motivation",
         "sidebar_label": "Motivation"
+      },
+      "introduction/philosophy": {
+        "title": "Philosophy",
+        "sidebar_label": "Philosophy"
+      },
+      "introduction/support-me": {
+        "title": "introduction/support-me"
       },
       "vs/claudia": {
         "title": "Laconia vs. Claudia",
@@ -56,15 +102,13 @@
     },
     "links": {
       "Docs": "Docs",
-      "API": "API",
-      "Help": "Help",
-      "Blog": "Blog"
+      "Help": "Help"
     },
     "categories": {
       "Introduction": "Introduction",
       "Laconia vs. Other": "Laconia vs. Other",
-      "Second Category": "Second Category",
-      "First Category": "First Category"
+      "Guides": "Guides",
+      "API Reference": "API Reference"
     }
   },
   "pages-strings": {
