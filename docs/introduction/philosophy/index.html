@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Philosophy · Laconia</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;When you learn about a framework, it’s important to know not only what it does but what principles it follows (from Spring)&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Philosophy · Laconia"/><meta property="og:type" content="website"/><meta property="og:url" content="https://laconiajs.io/index.html"/><meta property="og:description" content="&lt;p&gt;When you learn about a framework, it’s important to know not only what it does but what principles it follows (from Spring)&lt;/p&gt;
+"/><meta property="og:image" content="https://laconiajs.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://laconiajs.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/laconia_horizontal.svg" alt="Laconia"/><h2 class="headerTitleWithLogo">Laconia</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction/getting-started" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Philosophy</h1></header><article><div><span><p>When you learn about a framework, it’s important to know not only what it does but what principles it follows (from Spring)</p>
+<ul>
+<li><p>Separate cloud technologies and application domain</p>
+<ul>
+<li>Laconia is doing this by adopting known architecture such as Hexagonal architecture or Clean Architecture</li>
+<li>Encouraging consistent architectural patterns</li>
+<li>Externalise ecosystem, just a transport</li>
+<li>Example code for hexagonal architecture with the example given by Alistair Cockburn</li>
+<li>Lightweight dependency injection, decouple runtime</li>
+<li>Easy to test</li>
+<li>Your app is your core, not the outer part</li>
+</ul></li>
+<li><p>Encourage industry's serverless design principles and learnings</p>
+<ul>
+<li><p>AWS serverless design principles</p>
+<ul>
+<li>Single purpose function, event based?</li>
+<li><a href="https://d1.awsstatic.com/whitepapers/architecture/AWS-Serverless-Applications-Lens.pdf">https://d1.awsstatic.com/whitepapers/architecture/AWS-Serverless-Applications-Lens.pdf</a></li>
+</ul></li>
+<li><p>Philosophy - Small, no dependency, designed for AWS Lambda. See lambda-api</p>
+<ul>
+<li>Small, no dependency. 48kb? laconia-core</li>
+<li>Highly modular ? Here or top?</li>
+</ul></li>
+<li><p>Should not need complex application structure or complex dependency injection framework</p></li>
+<li><p>Convention over configuration</p></li>
+<li><p>Yan Cui's Production Ready serverless</p>
+<ul>
+<li>Secrets</li>
+<li>Single purpose function</li>
+<li>Plan to adopt more</li>
+</ul></li>
+<li><p>Make well known pattern cheap to implement, like recursion</p></li>
+</ul></li>
+<li><p>Framework is a detail</p>
+<ul>
+<li>From clean architecture</li>
+</ul></li>
+<li><p>Set high standards for code quality.</p></li>
+</ul>
+<ul>
+<li><p>API Program close to programming language, higher level abstraction</p>
+<ul>
+<li>Check zeit</li>
+<li>Cleanest API is when it's close to programming language</li>
+<li>Example of CORS</li>
+<li>No middleware as a framework</li>
+<li>Middleware as decorator function.</li>
+<li>Waiting for pipe</li>
+<li>invoker stack trace</li>
+<li>invoker good ux</li>
+</ul></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/laconia_horizontal.svg" alt="Laconia" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div></body></html>
