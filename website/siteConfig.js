@@ -21,17 +21,18 @@ const users = [
 ];
 
 const siteConfig = {
-  title: "Test Site", // Title for your website.
-  tagline: "A website for testing",
-  url: "https://your-docusaurus-test-site.com", // Your website URL
+  title: "Laconia", // Title for your website.
+  tagline:
+    "(Website under construction) Create well-crafted serverless functions, effortlessly",
+  url: "https://laconiajs.io", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: "test-site",
-  organizationName: "facebook",
+  projectName: "website",
+  organizationName: "laconiajs",
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -46,14 +47,14 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: "img/docusaurus.svg",
-  footerIcon: "img/docusaurus.svg",
+  headerIcon: "img/laconia_horizontal.svg",
+  footerIcon: "img/laconia_horizontal.svg",
   favicon: "img/favicon.png",
 
   /* Colors for website */
   colors: {
-    primaryColor: "#2E8555",
-    secondaryColor: "#205C3B"
+    primaryColor: "#2d807a",
+    secondaryColor: "#2bb9af"
   },
 
   /* Custom fonts for website */
