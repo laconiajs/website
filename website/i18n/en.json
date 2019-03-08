@@ -6,56 +6,76 @@
     "tagline": "(Website under construction) Create well-crafted serverless functions, effortlessly",
     "docs": {
       "api/adapter-api": {
-        "title": "api/adapter-api"
+        "title": "adapter-api",
+        "sidebar_label": "adapter-api"
       },
       "api/adapter": {
-        "title": "api/adapter"
+        "title": "adapter",
+        "sidebar_label": "adapter"
       },
       "api/batch": {
-        "title": "api/batch"
+        "title": "batch",
+        "sidebar_label": "batch"
       },
       "api/config": {
-        "title": "api/config"
+        "title": "config",
+        "sidebar_label": "config"
       },
       "api/core": {
-        "title": "api/core"
+        "title": "core",
+        "sidebar_label": "core"
       },
       "api/invoker": {
-        "title": "api/invoker"
+        "title": "invoker",
+        "sidebar_label": "invoker"
       },
       "api/middleware-lambda-warmer": {
-        "title": "api/middleware-lambda-warmer"
+        "title": "middleware-lambda-warmer",
+        "sidebar_label": "middleware-lambda-warmer"
       },
       "api/middleware-serverless-plugin-warmup": {
-        "title": "api/middleware-serverless-plugin-warmup"
+        "title": "middleware-serverless-plugin-warmup",
+        "sidebar_label": "middleware-serverless-plugin-warmup"
       },
       "guides/converting-apigateway-events": {
-        "title": "guides/converting-apigateway-events"
+        "title": "Converting API Gateway Events",
+        "sidebar_label": "Converting API Gateway Events"
       },
       "guides/converting-events": {
-        "title": "guides/converting-events"
+        "title": "Converting Events",
+        "sidebar_label": "Converting Events"
       },
       "guides/creating-custom-adapter": {
-        "title": "guides/creating-custom-adapter"
+        "title": "Creating Custom Adapter",
+        "sidebar_label": "Creating Custom Adapter"
+      },
+      "guides/creating-custom-middleware": {
+        "title": "Creating Custom Middleware",
+        "sidebar_label": "Creating Custom Middleware"
       },
       "guides/injecting-dependencies": {
-        "title": "guides/injecting-dependencies"
+        "title": "Injecting Dependencies",
+        "sidebar_label": "Injecting Dependencies"
       },
       "guides/invoking-other-lambdas": {
         "title": "Invoking Other Lambdas",
         "sidebar_label": "Invoking Other Lambdas"
       },
       "guides/long-running-tasks": {
-        "title": "guides/long-running-tasks"
+        "title": "Long Running Tasks",
+        "sidebar_label": "Long Running Tasks"
       },
       "guides/retrieving-config": {
-        "title": "guides/retrieving-config"
+        "title": "Retrieving Config",
+        "sidebar_label": "Retrieving Config"
       },
       "guides/retrieving-secrets": {
-        "title": "guides/retrieving-secrets"
+        "title": "Retrieving Secrets",
+        "sidebar_label": "Retrieving Secrets"
       },
       "guides/warming-up": {
-        "title": "guides/warming-up"
+        "title": "Warming Up",
+        "sidebar_label": "Warming Up"
       },
       "introduction/core-concepts": {
         "title": "Core Concepts",
@@ -66,7 +86,8 @@
         "sidebar_label": "Examples"
       },
       "introduction/faq": {
-        "title": "introduction/faq"
+        "title": "FAQ",
+        "sidebar_label": "FAQ"
       },
       "introduction/getting-started": {
         "title": "Getting Started",
@@ -81,13 +102,14 @@
         "sidebar_label": "Philosophy"
       },
       "introduction/support-me": {
-        "title": "introduction/support-me"
+        "title": "Support Me",
+        "sidebar_label": "Support Me"
       },
       "vs/claudia": {
         "title": "Laconia vs. Claudia",
         "sidebar_label": "Claudia"
       },
-      "vs/express": {
+      "vs/express-koa": {
         "title": "Laconia vs. Express, Koa, Hapi, etc.",
         "sidebar_label": "Express, Koa, Hapi, etc."
       },

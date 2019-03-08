@@ -3,8 +3,8 @@
     "Introduction": [
       "introduction/getting-started",
       "introduction/motivation",
-      "introduciton/core-concepts",
-      "introduciton/philosophy",
+      "introduction/core-concepts",
+      "introduction/philosophy",
       "introduction/examples",
       "introduction/faq",
       "introduction/support-me"
@@ -17,8 +17,8 @@
     ],
     "Guides": [
       "guides/injecting-dependencies",
-      "guides/converting-aws-event",
-      "guides/converting-apigateway-event",
+      "guides/converting-events",
+      "guides/converting-apigateway-events",
       "guides/retrieving-secrets",
       "guides/retrieving-config",
       "guides/warming-up",
