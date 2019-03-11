@@ -4,4 +4,5 @@ title: Retrieving Secrets
 sidebar_label: Retrieving Secrets
 ---
 
-some content
+- some content
+- easy to swap implementation without changing your code
