@@ -6,3 +6,4 @@ sidebar_label: Retrieving Secrets
 
 - some content
 - easy to swap implementation without changing your code
+- Show how one can inject secret into .register()
