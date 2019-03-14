@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>middleware-lambda-warmer · Laconia</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;_**🚧 Under construction, visit each package README in GitHub for API references&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="middleware-lambda-warmer · Laconia"/><meta property="og:type" content="website"/><meta property="og:url" content="https://laconiajs.io/index.html"/><meta property="og:description" content="&lt;p&gt;_**🚧 Under construction, visit each package README in GitHub for API references&lt;/p&gt;
+"/><meta property="og:image" content="https://laconiajs.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://laconiajs.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/laconia_horizontal.svg" alt="Laconia"/><h2 class="headerTitleWithLogo">Laconia</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/introduction/getting-started" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api/intro" target="_self">API</a></li><li class=""><a href="/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/core-concepts">Core Concepts</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/philosophy">Philosophy</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/examples">Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/support-me">Support Me</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Laconia vs. Other</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/vs/claudia">Claudia</a></li><li class="navListItem"><a class="navItem" href="/docs/vs/express-koa">Express, Koa, Hapi, etc.</a></li><li class="navListItem"><a class="navItem" href="/docs/vs/middy">Middy</a></li><li class="navListItem"><a class="navItem" href="/docs/vs/serverless-sam">Serverless, SAM, Apex, etc.</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/guides/injecting-dependencies">Injecting Dependencies</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/converting-events">Converting Events</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/converting-apigateway-events">Converting API Gateway Events</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/retrieving-secrets">Retrieving Secrets</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/retrieving-config">Retrieving Config</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/warming-up">Warming Up</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/invoking-other-lambdas">Invoking Other Lambdas</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/long-running-tasks">Long Running Tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/creating-custom-adapter">Creating Custom Adapter</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/creating-custom-middleware">Creating Custom Middleware</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/api/intro">API Reference: Intro</a></li><li class="navListItem"><a class="navItem" href="/docs/api/core">core</a></li><li class="navListItem"><a class="navItem" href="/docs/api/adapter">adapter</a></li><li class="navListItem"><a class="navItem" href="/docs/api/adapter-api">adapter-api</a></li><li class="navListItem"><a class="navItem" href="/docs/api/invoker">invoker</a></li><li class="navListItem"><a class="navItem" href="/docs/api/config">config</a></li><li class="navListItem"><a class="navItem" href="/docs/api/batch">batch</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api/middleware-lambda-warmer">middleware-lambda-warmer</a></li><li class="navListItem"><a class="navItem" href="/docs/api/middleware-serverless-plugin-warmup">middleware-serverless-plugin-warmup</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">middleware-lambda-warmer</h1></header><article><div><span><p><em><strong>🚧 Under construction, visit each package README in GitHub for API references
+🚧</strong></em></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/batch"><span class="arrow-prev">← </span><span>batch</span></a><a class="docs-next button" href="/docs/api/middleware-serverless-plugin-warmup"><span>middleware-serverless-plugin-warmup</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/laconia_horizontal.svg" alt="Laconia" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/introduction/getting-started">Getting Started</a><a href="/docs/en/introduction/core-concepts">Core Concepts</a><a href="/docs/en/api/intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/laconia" target="_blank" rel="noreferrer noopener">Stack Overflow</a></div><div><h5>More</h5><a href="https://github.com/laconiajs/laconia">GitHub</a><a class="github-button" href="https://github.com/laconiajs/laconia" data-icon="octicon-star" data-count-href="/laconiajs/laconia/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Wisen Tanasa</section></footer></div></body></html>
