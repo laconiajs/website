@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "(Website under construction) Create well-crafted serverless functions, effortlessly",
+    "tagline": "Create well-crafted serverless functions, effortlessly",
     "docs": {
       "api/adapter-api": {
         "title": "adapter-api",
@@ -24,6 +24,10 @@
       "api/core": {
         "title": "core",
         "sidebar_label": "core"
+      },
+      "api/intro": {
+        "title": "API Reference: Intro",
+        "sidebar_label": "API Reference: Intro"
       },
       "api/invoker": {
         "title": "invoker",
@@ -90,7 +94,7 @@
         "sidebar_label": "FAQ"
       },
       "introduction/getting-started": {
-        "title": "Getting Started",
+        "title": "Getting Started with Laconia",
         "sidebar_label": "Getting Started"
       },
       "introduction/motivation": {
@@ -123,7 +127,8 @@
       }
     },
     "links": {
-      "Docs": "Docs",
+      "Getting Started": "Getting Started",
+      "API": "API",
       "Help": "Help"
     },
     "categories": {

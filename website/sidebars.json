@@ -28,6 +28,7 @@
       "guides/creating-custom-middleware"
     ],
     "API Reference": [
+      "api/intro",
       "api/core",
       "api/adapter",
       "api/adapter-api",

@@ -22,8 +22,7 @@ const users = [
 
 const siteConfig = {
   title: "Laconia", // Title for your website.
-  tagline:
-    "(Website under construction) Create well-crafted serverless functions, effortlessly",
+  tagline: "Create well-crafted serverless functions, effortlessly",
   url: "https://laconiajs.io", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -39,7 +38,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "introduction/getting-started", label: "Docs" },
+    { doc: "introduction/getting-started", label: "Getting Started" },
+    { doc: "api/intro", label: "API" },
     { page: "help", label: "Help" }
   ],
 
@@ -53,7 +53,7 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: "#2d807a",
+    primaryColor: "#23635e",
     secondaryColor: "#2bb9af"
   },
 
@@ -72,7 +72,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Wisen Tanasa`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -91,7 +91,7 @@ const siteConfig = {
   ogImage: "img/docusaurus.png",
   twitterImage: "img/docusaurus.png",
 
-  cname: "laconiajs.io"
+  cname: "laconiajs.io",
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
@@ -101,7 +101,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: "https://github.com/laconiajs/laconia"
 };
 
 module.exports = siteConfig;
