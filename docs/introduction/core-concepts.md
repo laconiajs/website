@@ -1,7 +1,7 @@
 ---
 id: core-concepts
 title: Core Concepts
-sidebar_label: Core Concepts
+sidebar_label: 🚧Core Concepts
 ---
 
 _**🚧Under construction, come back later 🚧**_

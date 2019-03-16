@@ -1,7 +1,7 @@
 ---
 id: retrieving-secrets
 title: Retrieving Secrets
-sidebar_label: Retrieving Secrets
+sidebar_label: 🚧Retrieving Secrets
 ---
 
 _**🚧Under construction, come back later 🚧**_

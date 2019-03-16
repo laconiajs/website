@@ -1,7 +1,7 @@
 ---
 id: injecting-dependencies
 title: Injecting Dependencies
-sidebar_label: Injecting Dependencies
+sidebar_label: 🚧Injecting Dependencies
 ---
 
 _**🚧Under construction, come back later 🚧**_

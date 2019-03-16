@@ -1,7 +1,7 @@
 ---
 id: serverless-sam
 title: Laconia vs. Serverless Framework, SAM, Apex, etc.
-sidebar_label: Serverless, SAM, Apex, etc.
+sidebar_label: 🚧Serverless, SAM, Apex, etc.
 ---
 
 _**🚧Under construction, come back later 🚧**_

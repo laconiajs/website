@@ -1,7 +1,7 @@
 ---
 id: middy
 title: Laconia vs. Middy
-sidebar_label: Middy
+sidebar_label: 🚧Middy
 ---
 
 _**🚧Under construction, come back later 🚧**_

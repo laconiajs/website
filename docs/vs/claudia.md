@@ -1,7 +1,7 @@
 ---
 id: claudia
 title: Laconia vs. Claudia
-sidebar_label: Claudia
+sidebar_label: 🚧Claudia
 ---
 
 _**🚧Under construction, come back later 🚧**_

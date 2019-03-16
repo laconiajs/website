@@ -1,7 +1,7 @@
 ---
 id: support-me
 title: Support Me
-sidebar_label: Support Me
+sidebar_label: 🚧Support Me
 ---
 
 _**🚧 Under construction, come back later 🚧**_

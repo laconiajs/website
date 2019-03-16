@@ -43,47 +43,47 @@
       },
       "guides/converting-apigateway-events": {
         "title": "Converting API Gateway Events",
-        "sidebar_label": "Converting API Gateway Events"
+        "sidebar_label": "🚧Converting API Gateway Events"
       },
       "guides/converting-events": {
         "title": "Converting Events",
-        "sidebar_label": "Converting Events"
+        "sidebar_label": "🚧Converting Events"
       },
       "guides/creating-custom-adapter": {
         "title": "Creating Custom Adapter",
-        "sidebar_label": "Creating Custom Adapter"
+        "sidebar_label": "🚧Creating Custom Adapter"
       },
       "guides/creating-custom-middleware": {
         "title": "Creating Custom Middleware",
-        "sidebar_label": "Creating Custom Middleware"
+        "sidebar_label": "🚧Creating Custom Middleware"
       },
       "guides/injecting-dependencies": {
         "title": "Injecting Dependencies",
-        "sidebar_label": "Injecting Dependencies"
+        "sidebar_label": "🚧Injecting Dependencies"
       },
       "guides/invoking-other-lambdas": {
         "title": "Invoking Other Lambdas",
-        "sidebar_label": "Invoking Other Lambdas"
+        "sidebar_label": "🚧Invoking Other Lambdas"
       },
       "guides/long-running-tasks": {
         "title": "Long Running Tasks",
-        "sidebar_label": "Long Running Tasks"
+        "sidebar_label": "🚧Long Running Tasks"
       },
       "guides/retrieving-config": {
         "title": "Retrieving Config",
-        "sidebar_label": "Retrieving Config"
+        "sidebar_label": "🚧Retrieving Config"
       },
       "guides/retrieving-secrets": {
         "title": "Retrieving Secrets",
-        "sidebar_label": "Retrieving Secrets"
+        "sidebar_label": "🚧Retrieving Secrets"
       },
       "guides/warming-up": {
         "title": "Warming Up",
-        "sidebar_label": "Warming Up"
+        "sidebar_label": "🚧Warming Up"
       },
       "introduction/core-concepts": {
         "title": "Core Concepts",
-        "sidebar_label": "Core Concepts"
+        "sidebar_label": "🚧Core Concepts"
       },
       "introduction/examples": {
         "title": "Examples",
@@ -91,7 +91,7 @@
       },
       "introduction/faq": {
         "title": "FAQ",
-        "sidebar_label": "FAQ"
+        "sidebar_label": "🚧FAQ"
       },
       "introduction/getting-started": {
         "title": "Getting Started with Laconia",
@@ -107,23 +107,23 @@
       },
       "introduction/support-me": {
         "title": "Support Me",
-        "sidebar_label": "Support Me"
+        "sidebar_label": "🚧Support Me"
       },
       "vs/claudia": {
         "title": "Laconia vs. Claudia",
-        "sidebar_label": "Claudia"
+        "sidebar_label": "🚧Claudia"
       },
       "vs/express-koa": {
         "title": "Laconia vs. Express, Koa, Hapi, etc.",
-        "sidebar_label": "Express, Koa, Hapi, etc."
+        "sidebar_label": "🚧Express, Koa, Hapi, etc."
       },
       "vs/middy": {
         "title": "Laconia vs. Middy",
-        "sidebar_label": "Middy"
+        "sidebar_label": "🚧Middy"
       },
       "vs/serverless-sam": {
         "title": "Laconia vs. Serverless Framework, SAM, Apex, etc.",
-        "sidebar_label": "Serverless, SAM, Apex, etc."
+        "sidebar_label": "🚧Serverless, SAM, Apex, etc."
       }
     },
     "links": {
