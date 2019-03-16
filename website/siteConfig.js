@@ -47,8 +47,8 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: "img/laconia_horizontal.svg",
-  footerIcon: "img/laconia_horizontal.svg",
+  headerIcon: "img/laconia.svg",
+  footerIcon: "img/laconia.svg",
   favicon: "img/favicon.png",
 
   /* Colors for website */
