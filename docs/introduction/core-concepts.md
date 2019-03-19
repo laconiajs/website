@@ -6,7 +6,7 @@ sidebar_label: 🚧Core Concepts
 
 _**🚧Under construction, come back later 🚧**_
 
-![core-concepts](assets/core-concepts.drawio.png)
+![core-concepts](assets/core-concepts.drawio.svg)
 
 <!--
 - Diagram of (middleware -> handler) -> adapter -> app with function signature
