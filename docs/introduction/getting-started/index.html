@@ -76,7 +76,7 @@ this example shows what pattern Laconia encourages you to develop in:</p>
 });
 
 <span class="hljs-comment">// Your application core, which do not have any object instantiations</span>
-exports.app = <span class="hljs-keyword">async</span> (input, { orderRepository, idGenerator }) =&gt; {
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">async</span> (input, { orderRepository, idGenerator }) =&gt; {
   <span class="hljs-comment">// Dependencies made available via destructuring</span>
   <span class="hljs-keyword">await</span> orderRepository.save(order);
 };
@@ -86,7 +86,7 @@ exports.app = <span class="hljs-keyword">async</span> (input, { orderRepository,
   <span class="hljs-keyword">return</span> app(convertToInput(event), dependencies);
 };
 
-exports.handler = laconia(adapter(exports.app)).register(instances);
+exports.handler = laconia(adapter(app)).register(instances);
 </code></pre>
 <p>The rest of the packages help you write application against your serverless
 ecosystem, such as how you should invoke other Lambdas, how can you should
