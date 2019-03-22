@@ -54,30 +54,30 @@
 applications. Laconia shields you from the friction of AWS Lambda development by
 providing consistent architectural patterns and developer experience.</p>
 <h1><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h1>
-<p>Laconia is available as multiple packages on NPM:</p>
-<pre><code class="hljs css language-bash">npm install --save @laconia/core
-npm install --save @laconia/adapter
-npm install --save @laconia/adapter-api
-npm install --save @laconia/invoker
-npm install --save @laconia/config
-npm install --save @laconia/batch
-npm install --save @laconia/<span class="hljs-built_in">test</span>
-npm install --save @laconia/middleware-lambda-warmer
-npm install --save @laconia/middleware-serverless-plugin-warmup
+<p>Laconia is available as multiple packages on NPM, just install what you need:</p>
+<pre><code class="hljs"><span class="hljs-built_in">npm</span> install --save @laconia/core
+<span class="hljs-built_in">npm</span> install --save @laconia/adapter
+<span class="hljs-built_in">npm</span> install --save @laconia/adapter-api
+<span class="hljs-built_in">npm</span> install --save @laconia/invoker
+<span class="hljs-built_in">npm</span> install --save @laconia/config
+<span class="hljs-built_in">npm</span> install --save @laconia/batch
+<span class="hljs-built_in">npm</span> install --save @laconia/test
+<span class="hljs-built_in">npm</span> install --save @laconia/middleware-lambda-warmer
+<span class="hljs-built_in">npm</span> install --save @laconia/middleware-serverless-plugin-warmup
 </code></pre>
 <h1><a class="anchor" aria-hidden="true" id="basic-example"></a><a href="#basic-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic example</h1>
 <p><code>@laconia/core</code> package is the starting point to use Laconia. It provides a
 simple Dependency Injection capability to your Lambda handler. At the very core,
 this example shows what pattern Laconia encourages you to develop in:</p>
-<pre><code class="hljs css language-js"><span class="hljs-comment">// Objects creation, a function that returns an object</span>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Objects creation, a function that returns an object which contains your dependencies</span>
 <span class="hljs-keyword">const</span> instances = <span class="hljs-function">(<span class="hljs-params">{ env }</span>) =&gt;</span> ({
   <span class="hljs-attr">orderRepository</span>: <span class="hljs-keyword">new</span> DynamoDbOrderRepository(env.ORDER_TABLE_NAME),
   <span class="hljs-attr">idGenerator</span>: <span class="hljs-keyword">new</span> UuidIdGenerator()
 });
 
-<span class="hljs-comment">// Your application core, which do not have any object instantiations</span>
+<span class="hljs-comment">// Your application core, which is cloud agnostic</span>
+<span class="hljs-comment">// Dependencies made available via destructuring</span>
 <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">async</span> (input, { orderRepository, idGenerator }) =&gt; {
-  <span class="hljs-comment">// Dependencies made available via destructuring</span>
   <span class="hljs-keyword">await</span> orderRepository.save(order);
 };
 
@@ -88,10 +88,9 @@ this example shows what pattern Laconia encourages you to develop in:</p>
 
 exports.handler = laconia(adapter(app)).register(instances);
 </code></pre>
-<p>The rest of the packages help you write application against your serverless
-ecosystem, such as how you should invoke other Lambdas, how can you should
-retrieve secrets, how you should adapt AWS events to your application inputs,
-etc.</p>
+<p>The rest of the packages help you write an application against your serverless
+ecosystem, such as how should you invoke other Lambdas, how should you retrieve
+secrets, how should you adapt AWS events to your application inputs, etc.</p>
 <h1><a class="anchor" aria-hidden="true" id="learn-laconia"></a><a href="#learn-laconia" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Learn Laconia</h1>
 <p>To learn more about Laconia, check out the rest of the introduction section.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/introduction/motivation"><span>Motivation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/laconia.svg" alt="Laconia" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/introduction/getting-started">Getting Started</a><a href="/docs/en/introduction/core-concepts">Core Concepts</a><a href="/docs/en/api/intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/laconia" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://gitter.im/laconiajs/laconia">Chat</a></div><div><h5>More</h5><a href="https://github.com/laconiajs/laconia">GitHub</a><a class="github-button" href="https://github.com/laconiajs/laconia" data-icon="octicon-star" data-count-href="/laconiajs/laconia/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Wisen Tanasa</section><section class="copyright">Logo designed by Suzie Nam</section></footer></div></body></html>
