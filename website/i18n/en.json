@@ -77,6 +77,10 @@
         "title": "Retrieving Secrets",
         "sidebar_label": "🚧Retrieving Secrets"
       },
+      "guides/unit-testing": {
+        "title": "Unit Testing",
+        "sidebar_label": "🚧Unit Testing"
+      },
       "guides/warming-up": {
         "title": "Warming Up",
         "sidebar_label": "🚧Warming Up"
@@ -91,7 +95,7 @@
       },
       "introduction/faq": {
         "title": "FAQ",
-        "sidebar_label": "🚧FAQ"
+        "sidebar_label": "FAQ"
       },
       "introduction/getting-started": {
         "title": "Getting Started with Laconia",
@@ -107,7 +111,7 @@
       },
       "introduction/support-me": {
         "title": "Support Me",
-        "sidebar_label": "🚧Support Me"
+        "sidebar_label": "Support Me"
       },
       "vs/claudia": {
         "title": "Laconia vs. Claudia",
