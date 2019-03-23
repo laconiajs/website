@@ -31,15 +31,15 @@ simple Dependency Injection capability to your Lambda handler. At the very core,
 this example shows what pattern Laconia encourages you to develop in:
 
 ```js
-// Objects creation, a function that returns an object
+// Objects creation, a function that returns an object which contains your dependencies
 const instances = ({ env }) => ({
   orderRepository: new DynamoDbOrderRepository(env.ORDER_TABLE_NAME),
   idGenerator: new UuidIdGenerator()
 });
 
-// Your application core, which do not have any object instantiations
+// Your application core, which is cloud agnostic
+// Dependencies made available via destructuring
 const app = async (input, { orderRepository, idGenerator }) => {
-  // Dependencies made available via destructuring
   await orderRepository.save(order);
 };
 
@@ -51,10 +51,9 @@ const adapter = app => (event, dependencies) => {
 exports.handler = laconia(adapter(app)).register(instances);
 ```
 
-The rest of the packages help you write application against your serverless
-ecosystem, such as how you should invoke other Lambdas, how can you should
-retrieve secrets, how you should adapt AWS events to your application inputs,
-etc.
+The rest of the packages help you write an application against your serverless
+ecosystem, such as how should you invoke other Lambdas, how should you retrieve
+secrets, how should you adapt AWS events to your application inputs, etc.
 
 # Learn Laconia
 
