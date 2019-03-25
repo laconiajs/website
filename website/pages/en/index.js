@@ -47,8 +47,8 @@ class HomeSplash extends React.Component {
           <img
             src={`${baseUrl}img/laconia.svg`}
             alt="Project Logo"
-            height="80"
-            style={{ marginRight: "15px" }}
+            height="100"
+            style={{ marginRight: "18px" }}
           />
           {siteConfig.title}
         </div>
@@ -95,7 +95,8 @@ class Index extends React.Component {
 
     const Block = props => (
       <Container
-        padding={["bottom", "top"]}
+        // padding={["bottom", "top"]}
+        padding={["bottom"]}
         id={props.id}
         background={props.background}
       >
@@ -158,19 +159,52 @@ class Index extends React.Component {
     );
 
     const Features = () => (
-      <Block layout="fourColumn">
+      <Block layout="threeColumn">
         {[
           {
-            content: "This is the content of my feature",
-            image: `${baseUrl}img/docusaurus.svg`,
+            content:
+              "Laconia allows you to write serverless functions in Hexagonal Architecture easily. " +
+              "All of your serverless functions will have more consistent patterns that are testable, maintainable, and loosely coupled.",
+            image: `${baseUrl}img/noun_Modularity_2129357.svg`,
             imageAlign: "top",
-            title: "Feature One"
+            title: "Hexagonal"
           },
           {
-            content: "The content of my second feature",
-            image: `${baseUrl}img/docusaurus.svg`,
+            content:
+              "Never be forced to inherit any Laconia-specific component in your application code. " +
+              "Everything that you write will be plain objects and functions.",
+            image: `${baseUrl}img/noun_Unlock_1539479.svg`,
             imageAlign: "top",
-            title: "Feature Two"
+            title: "Non-intrusive"
+          },
+          {
+            content:
+              "As compared to other generic frameworks, Laconia has a specialization in serverless. " +
+              "This allows Laconia to enable serverless specific best practices and deal with serverless specific issues.",
+            image: `${baseUrl}img/noun_Cloud_2326588.svg`,
+            imageAlign: "top",
+            title: "Focused"
+          },
+          {
+            content:
+              "Using small and simple dependencies is the key to performant serverless functions. Laconia is designed with that principle in mind.",
+            image: `${baseUrl}img/noun_feather_2332226.svg`,
+            imageAlign: "top",
+            title: "Lightweight"
+          },
+          {
+            content:
+              "Laconia lays strong emphasis on code quality and high test coverage to ensure its seamless use and continued maintenance.",
+            image: `${baseUrl}img/noun_quality_685084.svg`,
+            imageAlign: "top",
+            title: "Quality"
+          },
+          {
+            content:
+              "Use Laconia with your favourite serverless deployment tools. Laconia is created to help more on the application side of serverless development.",
+            image: `${baseUrl}img/noun_modular_858985.svg`,
+            imageAlign: "top",
+            title: "Versatile"
           }
         ]}
       </Block>
@@ -209,8 +243,8 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          {/* <Features />
-          <FeatureCallout />
+          <Features />
+          {/*<FeatureCallout />
           <LearnHow />
           <TryOut />
           <Description />
