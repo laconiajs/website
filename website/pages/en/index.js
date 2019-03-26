@@ -179,7 +179,7 @@ class Index extends React.Component {
           },
           {
             content:
-              "As compared to other generic frameworks, Laconia has a specialization in serverless. " +
+              "Laconia is not a generic framework, it is specialised in serverless. " +
               "This allows Laconia to enable serverless specific best practices and deal with serverless specific issues.",
             image: `${baseUrl}img/noun_Cloud_2326588.svg`,
             imageAlign: "top",
