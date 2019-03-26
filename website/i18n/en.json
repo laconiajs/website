@@ -115,7 +115,7 @@
       },
       "vs/claudia": {
         "title": "Laconia vs. Claudia",
-        "sidebar_label": "🚧Claudia"
+        "sidebar_label": "Claudia"
       },
       "vs/express-koa": {
         "title": "Laconia vs. Express, Koa, Hapi, etc.",
