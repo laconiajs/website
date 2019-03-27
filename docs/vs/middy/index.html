@@ -51,8 +51,8 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Laconia vs. Middy</h1></header><article><div><span><p>Middy is a middleware engine for AWS Lambda. Middy has a lot of similarity with
-Laconia as it's trying to tackle a similar problem. Conceptually, Middy is more
-loose in term of how you are creating your Lambda handler as everything are
+Laconia as it's trying to tackle a similar problem. Conceptually, Middy is
+looser in term of how you are creating your Lambda handler as everything are
 middlewares. Laconia is introducing more structure to your Lambda handler with
 its core concepts.</p>
 <p>In Laconia, middleware is a concept that is recommended to be used on your
@@ -62,7 +62,7 @@ Cloud provider specific concerns that are not covered by the Adapters (
 has been taken by Laconia is also different, the middlewares are just plain
 higher order decorator functions.</p>
 <p>Although Middy can be used together with Laconia in one Lambda (see
-<a href="../introduction/examples">examples</a>), please take a good care of the separation
+<a href="../introduction/examples">examples</a>), please take good care of the separation
 of concerns Laconia introduces as specified above. There are only a handful of
 Middy's built-in middlewares that fit into Laconia concept of middlewares. To
 help you gain a better understanding of that, see the table below:</p>
