@@ -119,15 +119,15 @@
       },
       "vs/express-koa": {
         "title": "Laconia vs. Express, Koa, Hapi, etc.",
-        "sidebar_label": "🚧Express, Koa, Hapi, etc."
+        "sidebar_label": "Express, Koa, Hapi, etc."
       },
       "vs/middy": {
         "title": "Laconia vs. Middy",
-        "sidebar_label": "🚧Middy"
+        "sidebar_label": "Middy"
       },
       "vs/serverless-sam": {
         "title": "Laconia vs. Serverless Framework, SAM, Apex, etc.",
-        "sidebar_label": "🚧Serverless, SAM, Apex, etc."
+        "sidebar_label": "Serverless, SAM, Apex, etc."
       }
     },
     "links": {
