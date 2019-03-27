@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: "Laconia", // Title for your website.
-  tagline: "Create well-crafted serverless functions, effortlessly",
+  tagline: "Create well-crafted serverless applications, effortlessly",
   url: "https://laconiajs.io", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
