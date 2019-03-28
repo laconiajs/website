@@ -92,6 +92,8 @@ const siteConfig = {
   twitterImage: "img/docusaurus.png",
 
   cname: "laconiajs.io",
+  gaTrackingId: "UA-137047564-1",
+  gaGtag: true,
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
