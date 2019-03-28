@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Create well-crafted serverless functions, effortlessly",
+    "tagline": "Create well-crafted serverless applications, effortlessly",
     "docs": {
       "api/adapter-api": {
         "title": "adapter-api",

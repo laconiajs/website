@@ -10,7 +10,7 @@ specifically for the web. There are also libraries being built around these
 frameworks for it to be used in AWS Lambda. If what you are trying to build fit
 their design, you should use them.
 
-Laconia is designed speficially for serverless application development. In our
+Laconia is designed specifically for serverless application development. In our
 experience, the web is just one type of transport in your application once your
 architecture is growing. You can use Laconia to build multiple types of
 serverless application.

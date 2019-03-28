@@ -5,8 +5,8 @@ sidebar_label: Middy
 ---
 
 Middy is a middleware engine for AWS Lambda. Middy has a lot of similarity with
-Laconia as it's trying to tackle a similar problem. Conceptually, Middy is more
-loose in term of how you are creating your Lambda handler as everything are
+Laconia as it's trying to tackle a similar problem. Conceptually, Middy is
+looser in term of how you are creating your Lambda handler as everything are
 middlewares. Laconia is introducing more structure to your Lambda handler with
 its core concepts.
 
@@ -18,7 +18,7 @@ has been taken by Laconia is also different, the middlewares are just plain
 higher order decorator functions.
 
 Although Middy can be used together with Laconia in one Lambda (see
-[examples](../introduction/examples)), please take a good care of the separation
+[examples](../introduction/examples)), please take good care of the separation
 of concerns Laconia introduces as specified above. There are only a handful of
 Middy's built-in middlewares that fit into Laconia concept of middlewares. To
 help you gain a better understanding of that, see the table below:
