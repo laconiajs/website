@@ -12,7 +12,7 @@ experience.
 _At this point of time, only AWS is supported. Strong feedback and community
 support on this framework will help the support of other cloud providers._
 
-# Installation
+## Installation
 
 Laconia is available as multiple packages on NPM, install `@laconia/core` and
 get the rest depending on your need:
@@ -35,7 +35,7 @@ These are the available modules:
 - @laconia/middleware-serverless-plugin-warmup: Short circuit Lambda run when
   it's called by serverless-plugin-warmup
 
-# Basic example
+## Basic example
 
 `@laconia/core` package is the starting point to use Laconia. It provides a
 simple Dependency Injection capability to your Lambda handler. At the very core,
@@ -66,7 +66,7 @@ The rest of the packages help you write an application against your serverless
 ecosystem, such as how should you invoke other Lambdas, how should you retrieve
 secrets, how should you adapt AWS events to your application inputs, etc.
 
-# Running Laconia
+## Running Laconia
 
 Laconia runs on AWS Lambda with Node 8.10 runtime. It runs on plain JS, so there
 is no need to transpile your code via babel.
@@ -75,6 +75,6 @@ Laconia is only focused on your application development, so you will need to
 pick your own deployment tools. Laconia is compatible with tools like Serverless
 Framework.
 
-# Learn Laconia
+## Learn Laconia
 
 To learn more about Laconia, check out the rest of the introduction section.

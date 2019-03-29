@@ -7,7 +7,7 @@ sidebar_label: Philosophy
 When you are adopting a framework, it’s important to know not only what it does
 but how it is designed. These are the principles that Laconia follows:
 
-### Be a non-intrusive framework
+## Be a non-intrusive framework
 
 Your application code doesn't need to depend on the Laconia directly. Developers
 should be able to switch to other frameworks easily when needed without changing
@@ -22,7 +22,7 @@ technologies should be treated as such. Laconia also takes the _Framework are
 details_ approach from the Clean Architecture book by Robert C. Martin. There
 are no Laconia objects to be derived for your application to work.
 
-### Set serverless design principles and best practices the default
+## Set serverless design principles and best practices the default
 
 The design principles and best practices for serverless architecture are
 maturing. Laconia strives to make them adopted by default.
@@ -54,7 +54,7 @@ books, various talks, and loads of content from AWS Serverless Heroes e.g.
 [Production Ready Serverless](https://productionreadyserverless.com/). Laconia
 will evolve and continue to encourage these principles by default.
 
-### Design for developer experience
+## Design for developer experience
 
 The author puts a lot of thought and time to make the developers experience of
 Laconia as delightful as possible. Laconia has an ultra-high test coverage to
