@@ -15,3 +15,7 @@ Very simple for now, only top level as compared to other frameworks.
 
 - Ensure that we talk about #22
 -->
+
+<!---
+- Update laconia-core README as the concept of "handler" and "app" is changing a little
+-->
