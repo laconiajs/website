@@ -82,8 +82,6 @@ laconia(app).register(
 
 ## `postProcessor(postProcessorFn(instances))`
 
-> This API is incubating and may change
-
 Upon Lambda runtime execution, every postProcessorFn will be called on every
 factory functions individually.
 
