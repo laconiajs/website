@@ -19,10 +19,10 @@ get the rest depending on your need:
 
 ```
 npm install --save @laconia/core
-npm install --save <module name>
+npm install --save package
 ```
 
-These are the available modules:
+These are the available packages:
 
 - @laconia/core: Micro dependency injection framework
 - @laconia/adapter: Converts AWS events into your application input

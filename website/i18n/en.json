@@ -59,7 +59,7 @@
       },
       "guides/injecting-dependencies": {
         "title": "Injecting Dependencies",
-        "sidebar_label": "🚧Injecting Dependencies"
+        "sidebar_label": "Injecting Dependencies"
       },
       "guides/invoking-other-lambdas": {
         "title": "Invoking Other Lambdas",
@@ -71,15 +71,15 @@
       },
       "guides/retrieving-config": {
         "title": "Retrieving Config",
-        "sidebar_label": "🚧Retrieving Config"
+        "sidebar_label": "Retrieving Config"
       },
       "guides/retrieving-secrets": {
         "title": "Retrieving Secrets",
-        "sidebar_label": "🚧Retrieving Secrets"
+        "sidebar_label": "Retrieving Secrets"
       },
       "guides/unit-testing": {
         "title": "Unit Testing",
-        "sidebar_label": "🚧Unit Testing"
+        "sidebar_label": "Unit Testing"
       },
       "guides/warming-up": {
         "title": "Warming Up",
