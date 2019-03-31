@@ -4,9 +4,5 @@ title: "API Reference: Intro"
 sidebar_label: "API Reference: Intro"
 ---
 
-_**🚧 Under construction, visit each package README in GitHub for API references
-🚧**_
-
-<!---
-This section documents the API for all Laconia packages.
--->
+This section documents the API for all Laconia packages. Find what you're
+looking for on the sidebar.

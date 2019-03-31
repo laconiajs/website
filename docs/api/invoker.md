@@ -20,7 +20,7 @@ Example:
 const invoker = require("@laconia/invoker");
 const laconia = require("@laconia/core");
 
-const app = async ({ captureCardPaymentLambda }) => {
+const app = async (input, { captureCardPaymentLambda }) => {
   /* logic */
 };
 
