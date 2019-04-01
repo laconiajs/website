@@ -26,7 +26,7 @@
       "guides/invoking-other-lambdas",
       "guides/long-running-tasks",
       "guides/creating-custom-adapter",
-      "guides/creating-custom-middleware"
+      "guides/creating-middleware"
     ],
     "API Reference": [
       "api/intro",

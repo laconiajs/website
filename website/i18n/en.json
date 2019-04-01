@@ -53,9 +53,9 @@
         "title": "Creating Custom Adapter",
         "sidebar_label": "🚧Creating Custom Adapter"
       },
-      "guides/creating-custom-middleware": {
-        "title": "Creating Custom Middleware",
-        "sidebar_label": "🚧Creating Custom Middleware"
+      "guides/creating-middleware": {
+        "title": "Creating Middleware",
+        "sidebar_label": "Creating Middleware"
       },
       "guides/injecting-dependencies": {
         "title": "Injecting Dependencies",
@@ -63,11 +63,11 @@
       },
       "guides/invoking-other-lambdas": {
         "title": "Invoking Other Lambdas",
-        "sidebar_label": "🚧Invoking Other Lambdas"
+        "sidebar_label": "Invoking Other Lambdas"
       },
       "guides/long-running-tasks": {
         "title": "Long Running Tasks",
-        "sidebar_label": "🚧Long Running Tasks"
+        "sidebar_label": "Long Running Tasks"
       },
       "guides/retrieving-config": {
         "title": "Retrieving Config",
@@ -83,7 +83,7 @@
       },
       "guides/warming-up": {
         "title": "Warming Up",
-        "sidebar_label": "🚧Warming Up"
+        "sidebar_label": "Warming Up"
       },
       "introduction/core-concepts": {
         "title": "Core Concepts",
