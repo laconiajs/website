@@ -111,10 +111,7 @@ laconia(<span class="hljs-function">(<span class="hljs-params">event, { service 
 
 <span class="hljs-comment">// Register concurrent factories</span>
 <span class="hljs-keyword">const</span> app = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {};
-laconia(app).register([
-  ssmConfig.envVarInstances(),
-  s3Config.envVarInstances()
-]);
+laconia(app).register([config.envVarInstances(), invoker.envVarInstances()]);
 
 <span class="hljs-comment">// Using laconiaContext in factory</span>
 <span class="hljs-keyword">const</span> app = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {};
