@@ -55,10 +55,7 @@ laconia((event, { service }) => service.call()).register(() => ({
 
 // Register concurrent factories
 const app = () => {};
-laconia(app).register([
-  ssmConfig.envVarInstances(),
-  s3Config.envVarInstances()
-]);
+laconia(app).register([config.envVarInstances(), invoker.envVarInstances()]);
 
 // Using laconiaContext in factory
 const app = () => {};

@@ -41,17 +41,13 @@
         "title": "middleware-serverless-plugin-warmup",
         "sidebar_label": "middleware-serverless-plugin-warmup"
       },
+      "guides/adapting-events": {
+        "title": "Adapting Events",
+        "sidebar_label": "🚧Adapting Events"
+      },
       "guides/converting-apigateway-events": {
         "title": "Converting API Gateway Events",
         "sidebar_label": "🚧Converting API Gateway Events"
-      },
-      "guides/converting-events": {
-        "title": "Converting Events",
-        "sidebar_label": "🚧Converting Events"
-      },
-      "guides/creating-custom-adapter": {
-        "title": "Creating Custom Adapter",
-        "sidebar_label": "🚧Creating Custom Adapter"
       },
       "guides/creating-middleware": {
         "title": "Creating Middleware",

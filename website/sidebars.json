@@ -18,14 +18,12 @@
     "Guides": [
       "guides/injecting-dependencies",
       "guides/unit-testing",
-      "guides/converting-events",
-      "guides/converting-apigateway-events",
+      "guides/adapting-events",
       "guides/retrieving-secrets",
       "guides/retrieving-config",
       "guides/warming-up",
       "guides/invoking-other-lambdas",
       "guides/long-running-tasks",
-      "guides/creating-custom-adapter",
       "guides/creating-middleware"
     ],
     "API Reference": [
