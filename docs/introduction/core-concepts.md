@@ -76,9 +76,7 @@ There a couple of things to notice in the diagram:
 
 1. **Laconia Handler** is the Laconia's implementation of the **Handler** that
    we have written above. It does a little bit more than that of course.
-2. Unless it is not supported yet, there are built-in **Adapter**s, so that you
-   won't have to write this by yourself.
-3. Laconia can only predict so much how do you plan to interact with the cloud
-   platform. There are built-in **Secondary Adapter**s that you can use if you
-   are satisfied with the interface, otherwise, you can wrap it around in your
-   own **Secondary Adapter**.
+2. Laconia encourages you to design your application's ports first. This means
+   the it's high likely that you will need to create your own **Primary
+   Adapters** and **Secondary Adapters**. Laconia also provides some built-in
+   adapters that you can use if it matches your ports.
