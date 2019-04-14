@@ -12,13 +12,8 @@ event from S3, then convert the object into your application input based on the
 
 - `options`:
   - `inputType = "object"`
-    - Supported values are: `object`, `stream`, `event`
+    - Supported values are: `object`, `stream`
     - Determines what should the application receive as an input
-
-_To reduce your code dependency to AWS, opt for other `inputType` before using
-`event`. The `event` inputType should only be used when you don't actually need
-to retrieve the object from S3, such as listening to s3:ObjectRemoved:Delete
-events_.
 
 Example:
 
@@ -39,20 +34,6 @@ const s3 = require("@laconia/adapter").s3({ inputType: "stream" });
 
 const app = async inputStream => {
   inputStream.pipe(); // do stream operation with the S3 object stream
-};
-
-exports.handler = laconia(s3(app));
-
-// inputType: event
-const laconia = require("@laconia/core");
-const s3 = require("@laconia/adapter").s3({ inputType: "event" });
-
-const app = async s3Event => {
-  console.log(
-    "Received an event from S3: ",
-    s3Event.bucket, // Bucket name
-    s3Event.key // The URL decoded object key
-  );
 };
 
 exports.handler = laconia(s3(app));
