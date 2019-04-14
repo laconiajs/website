@@ -19,21 +19,23 @@ get the rest depending on your need:
 
 ```
 npm install --save @laconia/core
-npm install --save package
+npm install --save @laconia/<package name>
 ```
 
 These are the available packages:
 
-- @laconia/core: Micro dependency injection framework
-- @laconia/adapter: Converts AWS events into your application input
-- @laconia/adapter-api: Converts API Gateway Proxy events into your application
-  input
-- @laconia/invoker: Invokes Lambdas like regular functions
-- @laconia/config: Externalizes application secret and configuration
-- @laconia/batch: Reads large number of records without time limit
-- @laconia/middleware-lambda-warmer: Integrates Lambda with lambda-warmer
-- @laconia/middleware-serverless-plugin-warmup: Short circuit Lambda run when
-  it's called by serverless-plugin-warmup
+- [core](api/core.md): Micro dependency injection framework
+- [adapter](api/adapter.md): Converts AWS events into your application input
+- [adapter-api](api/adapter-api.md): Converts API Gateway Proxy events into your
+  application input
+- [event](api/event.md): Parses and responds to incoming events
+- [invoker](api/invoker.md): Invokes Lambdas like regular functions
+- [config](api/config.md): Externalizes application secret and configuration
+- [batch](api/batch.md): Reads large number of records without time limit
+- [middleware-lambda-warmer](api/middleware-lambda-warmer.md): Integrates Lambda
+  with lambda-warmer
+- [middleware-serverless-plugin-warmup](api/middleware-serverless-plugin-warmup.md):
+  Short circuit Lambda run when it's called by serverless-plugin-warmup
 
 ## Basic example
 
