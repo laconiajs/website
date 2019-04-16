@@ -19,6 +19,7 @@
       "guides/injecting-dependencies",
       "guides/unit-testing",
       "guides/adapting-events",
+      "guides/creating-api-endpoints",
       "guides/retrieving-secrets",
       "guides/retrieving-config",
       "guides/warming-up",
@@ -29,6 +30,7 @@
     "API Reference": [
       "api/intro",
       "api/core",
+      "api/event",
       "api/adapter",
       "api/adapter-api",
       "api/invoker",

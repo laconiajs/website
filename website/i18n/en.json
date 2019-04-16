@@ -25,6 +25,10 @@
         "title": "core",
         "sidebar_label": "core"
       },
+      "api/event": {
+        "title": "event",
+        "sidebar_label": "event"
+      },
       "api/intro": {
         "title": "API Reference: Intro",
         "sidebar_label": "API Reference: Intro"
@@ -43,11 +47,11 @@
       },
       "guides/adapting-events": {
         "title": "Adapting Events",
-        "sidebar_label": "🚧Adapting Events"
+        "sidebar_label": "Adapting Events"
       },
-      "guides/converting-apigateway-events": {
-        "title": "Converting API Gateway Events",
-        "sidebar_label": "🚧Converting API Gateway Events"
+      "guides/creating-api-endpoints": {
+        "title": "Creating API Endpints",
+        "sidebar_label": "🚧Creating API Endpoints"
       },
       "guides/creating-middleware": {
         "title": "Creating Middleware",
