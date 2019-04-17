@@ -9,27 +9,91 @@ _**🚧Under construction, come back later 🚧**_
 ## Overview
 
 Laconia supports parsing and responding to AWS API Gateway Lambda Proxy
-Integration. Laconia provides two ways for you to adapt AWS events into your
-applications:
+Integration. Like other AWS Lambda events, Laconia provides two ways for you to
+adapt API Gateway events into your applications:
 
 - Creating your own adapter
 - Using Laconia built-in adapters
 
-Single purpose function blah
+## The principles
+
+Laconia encourages single purpose function, which means most of your routing
+needs must be defined in API Gateway instead of Lambda.
+
+Incoming events should be able to be treated with plain function concept.
+Requests that are coming in is function arguments, response that goes out is
+`return` statement. This means Laconia does not support the typical semantic of
+`req, res` as compared to other web frameworks.
 
 ## Creating an adapter
 
-TBD
+As Laconia is encouraging you to design your ports first, it is likely that you
+will need to implement your own adapter. Let's take an example of an API
+endpoint for creating an arbitrary order. You can implement it with the `event`
+package like this:
 
-automatic parsing blah blah
+```js
+const laconia = require("@laconia/core");
+const { req, res } = require("@laconia/event").apigateway;
 
-<!-- function, not send() -->
+// Your core application
+const createOrder = (orderId, orderDetails) => {
+  // Creates order...
+  throw new Error("Duplicate order Id");
+};
+
+const adapter = app => event => {
+  try {
+    const r = req(event); // Parse raw API Gateway event
+    const orderId = r.params.id; // Get id from either path parameter or query string parameter
+    const orderDetails = r.body; // JSON parse the body if content-type is application/json
+    const output = app(orderId, orderDetails);
+    return res(output); // Creates an API Gateway response
+  } catch (err) {
+    // Perform `JSON.stringify` automatically and set status code to 500
+    return res({ error: { message: err.message } }, 500);
+  }
+};
+
+exports.handler = laconia(adapter(createOrder));
+```
+
+### Composition
+
+Laconia believes that intuitive API design is the design that's closest to the
+programming language used. To support shared code, such as additional headers
+for CORS across multiple Lambdas, you can do a simple composition like this:
+
+```js
+const withCors = next => async (...args) => {
+  const response = await next(...args);
+  response.headers["Access-Control-Allow-Origin"] = "*";
+  return response;
+};
+
+const adapter = app => withCors(event => res("hello"));
+```
 
 ### Error handling
 
-TBD - Copy ValidationError stuff
+Your application code must not contain any HTTP details, this would include
+error handling. The error must be handled in the `catch` block of your adapter.
+You can check the error object's properties to customise the status code or
+error body, such as by checking its name.
 
-### CORS
+```js
+const adapter = app => event => {
+  try {
+    return app(req(event).body);
+  } catch (err) {
+    if (err.name === "ValidationError") {
+      return res("ValidationError is thrown, the error was ...", 400);
+    } else {
+      return res("Unknown error", 500);
+    }
+  }
+};
+```
 
 ## Using built-in adapters
 
@@ -46,6 +110,18 @@ const app = async ({ id }, { orderStream }) => {
 };
 
 exports.handler = laconia(apigateway(app)).register(instances);
+```
+
+### Additional headers
+
+```js
+const apigateway = require("@laconia/adapter-api").apigateway({
+  responseAdditionalHeaders: {
+    "Access-Control-Allow-Origin": "*"
+  }
+});
+
+exports.handler = laconia(apigateway(app));
 ```
 
 ### Error handling
@@ -65,7 +141,3 @@ const apigateway = require("@laconia/adapter-api").apigateway({
 
 exports.handler = laconia(apigateway(app));
 ```
-
-### CORS
-
-TBD
