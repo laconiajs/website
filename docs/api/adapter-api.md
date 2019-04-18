@@ -4,6 +4,9 @@ title: adapter-api
 sidebar_label: adapter-api
 ---
 
+adapter-api is using the [event](api/event.md) package under the hood, so deeper
+details of how the adapter-api works is documented there.
+
 ## `apigateway(options)(app)`
 
 Creates a new Adapter for API Gateway.
@@ -49,10 +52,34 @@ apigateway({
   }
 });
 
+// Error mapping with Map
+apigateway({
+  errorMappings: new Map([
+    ["Validation.*", () => ({ statusCode: 400 })],
+    [".*Error", () => ({ statusCode: 500 })]
+  ])
+});
+
 // Additional headers - CORS
 apigateway({
-  additionalHeaders: {
+  responseAdditionalHeaders: {
     "Access-Control-Allow-Origin": "foo"
   }
 });
 ```
+
+### Supported input types
+
+- `body`
+
+  Converts the event body into your application input. Under the hood,
+  `adapter-api` will essentially be passing the
+  [`ApiGatewayEvent.body`](api/event.md) to your application. Visit its
+  documentation to understand what you will receive in your application.
+
+- `params`
+
+  Converts the query parameters and path parameters into your application input.
+  Under the hood, `adapter-api` will essentially be passing the
+  [`ApiGatewayEvent.params`](api/event.md) to your application. Visit its
+  documentation to understand what you will receive in your application.

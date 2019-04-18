@@ -4,6 +4,9 @@ title: adapter
 sidebar_label: adapter
 ---
 
+adapter is using the [event](api/event.md) package under the hood, so deeper
+details of how the adapter works is documented there.
+
 ## `s3(options)(app)`
 
 Creates an event adapter that will retrieve the object that has triggered the
