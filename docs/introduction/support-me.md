@@ -14,7 +14,7 @@ any of the following:
 - Be involved in the community! Feel free to chat or ask questions at
   [gitter](https://gitter.im/laconiajs/laconia)
 - If you find something wrong, missing, or might be helpful, feel free raise an
-  issue or pull request in GitHub. What's helpful for is helpful for other
+  issue or pull request in GitHub. What's helpful for you is helpful for other
   people!
 - If you love the project,
   [give it a star](https://github.com/laconiajs/laconia)!
