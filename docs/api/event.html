@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>event · Laconia</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Parses and responds to incoming events. Helps you create your own adapter&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="event · Laconia"/><meta property="og:type" content="website"/><meta property="og:url" content="https://laconiajs.io/index.html"/><meta property="og:description" content="&lt;p&gt;Parses and responds to incoming events. Helps you create your own adapter&lt;/p&gt;
+"/><meta property="og:image" content="https://laconiajs.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://laconiajs.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-137047564-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-137047564-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/laconia.svg" alt="Laconia"/><h2 class="headerTitleWithLogo">Laconia</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/introduction/getting-started" target="_self">Getting Started</a></li><li class="siteNavGroupActive"><a href="/docs/api/intro" target="_self">API</a></li><li class=""><a href="/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/core-concepts">Core Concepts</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/philosophy">Philosophy</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/examples">Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction/support-me">Support Me</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Laconia vs. Other</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/vs/claudia">Claudia</a></li><li class="navListItem"><a class="navItem" href="/docs/vs/express-koa">Express, Koa, Hapi, etc.</a></li><li class="navListItem"><a class="navItem" href="/docs/vs/middy">Middy</a></li><li class="navListItem"><a class="navItem" href="/docs/vs/serverless-sam">Serverless, SAM, Apex, etc.</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/guides/injecting-dependencies">Injecting Dependencies</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/unit-testing">Unit Testing</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/adapting-events">Adapting Events</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/creating-api-endpoints">Creating API Endpoints</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/retrieving-secrets">Retrieving Secrets</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/retrieving-config">Retrieving Config</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/warming-up">Warming Up</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/invoking-other-lambdas">Invoking Other Lambdas</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/long-running-tasks">Long Running Tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/creating-middleware">Creating Middleware</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/api/intro">API Reference: Intro</a></li><li class="navListItem"><a class="navItem" href="/docs/api/core">core</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api/event">event</a></li><li class="navListItem"><a class="navItem" href="/docs/api/adapter">adapter</a></li><li class="navListItem"><a class="navItem" href="/docs/api/adapter-api">adapter-api</a></li><li class="navListItem"><a class="navItem" href="/docs/api/invoker">invoker</a></li><li class="navListItem"><a class="navItem" href="/docs/api/config">config</a></li><li class="navListItem"><a class="navItem" href="/docs/api/batch">batch</a></li><li class="navListItem"><a class="navItem" href="/docs/api/middleware-lambda-warmer">middleware-lambda-warmer</a></li><li class="navListItem"><a class="navItem" href="/docs/api/middleware-serverless-plugin-warmup">middleware-serverless-plugin-warmup</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">event</h1></header><article><div><span><p>Parses and responds to incoming events. Helps you create your own adapter
+easily.</p>
+<h2><a class="anchor" aria-hidden="true" id="s3event-s3-new-awss3"></a><a href="#s3event-s3-new-awss3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>s3(event, s3 = new AWS.S3())</code></h2>
+<p>Parses and contain the incoming S3 event into <code>S3Event</code> object.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Example creation of an adapter</span>
+<span class="hljs-keyword">const</span> { s3 } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@laconia/event"</span>);
+
+<span class="hljs-keyword">const</span> adapter = <span class="hljs-function"><span class="hljs-params">app</span> =&gt;</span> (event, dependencies) =&gt; {
+  <span class="hljs-keyword">const</span> s3Event = s3(event);
+  <span class="hljs-comment">// Interact with s3Event object</span>
+  <span class="hljs-built_in">console</span>.log(s3Event.bucket);
+  <span class="hljs-built_in">console</span>.log(s3Event.key);
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="s3eventbucket"></a><a href="#s3eventbucket" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>S3Event.bucket</code></h3>
+<p>Returns the S3 bucket name that has triggered the Lambda</p>
+<h3><a class="anchor" aria-hidden="true" id="s3eventkey"></a><a href="#s3eventkey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>S3Event.key</code></h3>
+<p>Returns the S3 object key that has triggered the Lambda. The key will already be
+normalized for you by handling the + sign and URL decoding it. For example, this
+property will return &quot;red flower.jpg&quot; instead of &quot;red+flower.jpg&quot;</p>
+<h3><a class="anchor" aria-hidden="true" id="s3eventgetobject"></a><a href="#s3eventgetobject" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>S3Event.getObject()</code></h3>
+<p>Retrieves the object from the S3 bucket that has triggered the Lambda. It
+returns only the <code>Body</code> returned by aws-sdk.</p>
+<h3><a class="anchor" aria-hidden="true" id="s3eventgetjson"></a><a href="#s3eventgetjson" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>S3Event.getJson()</code></h3>
+<p>Retrieves the object from the S3 bucket that has triggered the Lambda, and
+parses it into JSON.</p>
+<h3><a class="anchor" aria-hidden="true" id="s3eventgetstream"></a><a href="#s3eventgetstream" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>S3Event.getStream()</code></h3>
+<p>Creates a read stream for the object that has triggered the Lambda.</p>
+<h2><a class="anchor" aria-hidden="true" id="snsevent"></a><a href="#snsevent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sns(event)</code></h2>
+<p>Parses and contain the incoming SNS event into <code>SnsEvent</code> object.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Example creation of an adapter</span>
+<span class="hljs-keyword">const</span> { sns } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@laconia/event"</span>);
+
+<span class="hljs-keyword">const</span> adapter = <span class="hljs-function"><span class="hljs-params">app</span> =&gt;</span> (event, dependencies) =&gt; {
+  <span class="hljs-keyword">const</span> snsEvent = sns(event);
+  <span class="hljs-comment">// Interact with snsEvent object</span>
+  <span class="hljs-built_in">console</span>.log(snsEvent.message);
+  <span class="hljs-built_in">console</span>.log(snsEvent.subject);
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="snseventsubject"></a><a href="#snseventsubject" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>SnsEvent.subject</code></h3>
+<p>Returns the subject of the SNS message.</p>
+<h3><a class="anchor" aria-hidden="true" id="snseventmessage"></a><a href="#snseventmessage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>SnsEvent.message</code></h3>
+<p>Returns the body of the SNS message. The message will automatically be JSON
+parsed.</p>
+<h2><a class="anchor" aria-hidden="true" id="sqsevent"></a><a href="#sqsevent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sqs(event)</code></h2>
+<p>Parses and contain the incoming SQS event into <code>SqsEvent</code> object.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Example creation of an adapter</span>
+<span class="hljs-keyword">const</span> { sqs } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@laconia/event"</span>);
+
+<span class="hljs-keyword">const</span> adapter = <span class="hljs-function"><span class="hljs-params">app</span> =&gt;</span> (event, dependencies) =&gt; {
+  <span class="hljs-keyword">const</span> sqsEvent = sqs(event);
+
+  <span class="hljs-comment">// Create an array of SQS message body</span>
+  <span class="hljs-built_in">console</span>.log(sqsEvent.records.map(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.body));
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sqseventrecords"></a><a href="#sqseventrecords" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>SqsEvent.records</code></h3>
+<p>Returns an array of <code>SqsRecord</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="sqsrecordbody"></a><a href="#sqsrecordbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>SqsRecord.body</code></h3>
+<p>Returns the body of the SQS message. The message will automatically be JSON
+parsed.</p>
+<h2><a class="anchor" aria-hidden="true" id="kinesisevent"></a><a href="#kinesisevent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kinesis(event)</code></h2>
+<p>Parses and contain the incoming Kinesis event into <code>KinesisEvent</code> object.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Example creation of an adapter</span>
+<span class="hljs-keyword">const</span> { kinesis } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@laconia/event"</span>);
+
+<span class="hljs-keyword">const</span> adapter = <span class="hljs-function"><span class="hljs-params">app</span> =&gt;</span> (event, dependencies) =&gt; {
+  <span class="hljs-comment">// Create an array of kinesis data</span>
+  <span class="hljs-built_in">console</span>.log(kinesis(event).records.map(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.jsonData));
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="kinesiseventrecords"></a><a href="#kinesiseventrecords" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>KinesisEvent.records</code></h3>
+<p>Returns an array of <code>KinesisRecord</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="kinesisrecordjsondata"></a><a href="#kinesisrecordjsondata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>KinesisRecord.jsonData</code></h3>
+<p>Returns the record data in a form of JSON.</p>
+<h3><a class="anchor" aria-hidden="true" id="kinesisrecordtextdata"></a><a href="#kinesisrecordtextdata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>KinesisRecord.textData</code></h3>
+<p>Returns the record data in a form of String.</p>
+<h3><a class="anchor" aria-hidden="true" id="kinesisrecorddata"></a><a href="#kinesisrecorddata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>KinesisRecord.data</code></h3>
+<p>Returns the record data in a form of Buffer.</p>
+<h2><a class="anchor" aria-hidden="true" id="apigatewayreqevent"></a><a href="#apigatewayreqevent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>apigateway.req(event)</code></h2>
+<p>Parses and contain the incoming API Gateway event into <code>ApiGatewayEvent</code> object.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Example creation of an adapter</span>
+<span class="hljs-keyword">const</span> { req, res } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@laconia/event"</span>).apigateway;
+
+<span class="hljs-keyword">const</span> adapter = <span class="hljs-function"><span class="hljs-params">app</span> =&gt;</span> (event, dependencies) =&gt; {
+  <span class="hljs-keyword">const</span> r = req(event);
+  <span class="hljs-built_in">console</span>.log(r.body);
+  <span class="hljs-keyword">const</span> output = app(r.params.id, dependencies);
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="apigatewayeventbody"></a><a href="#apigatewayeventbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ApiGatewayEvent.body</code></h3>
+<p>Returns the body of the request.</p>
+<p>The returned HTTP request body is parsed according to the Content-Type header.
+The currently supported Content-Types are:</p>
+<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>application/json</li>
+</ul>
+<p>When the Content-Type received is not supported, the body will not be parsed
+(the original body from the API Gateway Lambda Integration event object will be
+returned).</p>
+<p>If <code>isBase64Encoded</code> set to true, the request body will be base64 decoded
+automatically too.</p>
+<h3><a class="anchor" aria-hidden="true" id="apigatewayeventheaders"></a><a href="#apigatewayeventheaders" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ApiGatewayEvent.headers</code></h3>
+<p>Returns the request headers object. You can access the header with the original
+AWS case, or the lower case as per standard node HTTP standard (the canonical
+format).</p>
+<h3><a class="anchor" aria-hidden="true" id="apigatewayeventparams"></a><a href="#apigatewayeventparams" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ApiGatewayEvent.params</code></h3>
+<p>Returns the request params object, which is a combination of query string
+parameters and path parameters.</p>
+<h2><a class="anchor" aria-hidden="true" id="apigatewayresoutput-statuscode-200-headers"></a><a href="#apigatewayresoutput-statuscode-200-headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>apigateway.res(output, statusCode = 200, headers = {})</code></h2>
+<p>Creates a new API Gateway Lambda Integration response object based on the
+specified parameters.</p>
+<p>You can specify the following output:</p>
+<ul>
+<li>Object
+<ul>
+<li>Response Content-Type will be set to application/json</li>
+<li>Your app output will automatically be JSON stringified</li>
+</ul></li>
+<li>String
+<ul>
+<li>Response Content-Type will be set to text/plain</li>
+</ul></li>
+<li>Number
+<ul>
+<li>Response Content-Type will be set to text/plain</li>
+<li>Your app output will automatically be JSON stringified</li>
+</ul></li>
+<li>Promise that wraps any of the above</li>
+<li>Buffer / Stream - Unsupported yet</li>
+</ul>
+<p>Example:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Example of adapter creation</span>
+<span class="hljs-keyword">const</span> { req, res } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@laconia/event"</span>).apigateway;
+
+<span class="hljs-keyword">const</span> adapter = <span class="hljs-function"><span class="hljs-params">app</span> =&gt;</span> (event, dependencies) =&gt; {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> output = app(id, dependencies);
+    <span class="hljs-keyword">return</span> res(output); <span class="hljs-comment">// Returns 200</span>
+  } <span class="hljs-keyword">catch</span> (err) {
+    <span class="hljs-comment">// Returns error response</span>
+    <span class="hljs-keyword">return</span> res(err.message, <span class="hljs-number">500</span>);
+  }
+};
+
+<span class="hljs-comment">// Respond with 200</span>
+<span class="hljs-comment">// Will print something like:</span>
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//   body: 'Success message',</span>
+<span class="hljs-comment">//   statusCode: 200,</span>
+<span class="hljs-comment">//   headers: { 'Content-Type': 'text/plain' },</span>
+<span class="hljs-comment">//   isBase64Encoded: false</span>
+<span class="hljs-comment">// }</span>
+<span class="hljs-built_in">console</span>.log(res(<span class="hljs-string">"Success message"</span>));
+
+<span class="hljs-comment">// Respond with 500</span>
+res(<span class="hljs-string">"Some error message"</span>, <span class="hljs-number">500</span>);
+
+<span class="hljs-comment">// Respond with 404</span>
+res(<span class="hljs-string">"Not found"</span>, <span class="hljs-number">404</span>);
+
+<span class="hljs-comment">// Respond with JSON body</span>
+res({ <span class="hljs-attr">hello</span>: <span class="hljs-string">"world"</span> });
+
+<span class="hljs-comment">// Respond with headers</span>
+<span class="hljs-comment">// Will print something like:</span>
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//   body: '{"error":"not found"}',</span>
+<span class="hljs-comment">//   statusCode: 404,</span>
+<span class="hljs-comment">//   headers:</span>
+<span class="hljs-comment">//     { 'Content-Type': 'application/json; charset=utf-8',</span>
+<span class="hljs-comment">//       'Access-Allow-Control-Origin': '*' },</span>
+<span class="hljs-comment">//   isBase64Encoded: false</span>
+<span class="hljs-comment">// }</span>
+res({ <span class="hljs-attr">error</span>: <span class="hljs-string">"not found"</span> }, <span class="hljs-number">404</span>, {
+  <span class="hljs-string">"Access-Allow-Control-Origin"</span>: <span class="hljs-string">"*"</span>
+});
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/core"><span class="arrow-prev">← </span><span>core</span></a><a class="docs-next button" href="/docs/api/adapter"><span>adapter</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#s3event-s3-new-awss3"><code>s3(event, s3 = new AWS.S3())</code></a><ul class="toc-headings"><li><a href="#s3eventbucket"><code>S3Event.bucket</code></a></li><li><a href="#s3eventkey"><code>S3Event.key</code></a></li><li><a href="#s3eventgetobject"><code>S3Event.getObject()</code></a></li><li><a href="#s3eventgetjson"><code>S3Event.getJson()</code></a></li><li><a href="#s3eventgetstream"><code>S3Event.getStream()</code></a></li></ul></li><li><a href="#snsevent"><code>sns(event)</code></a><ul class="toc-headings"><li><a href="#snseventsubject"><code>SnsEvent.subject</code></a></li><li><a href="#snseventmessage"><code>SnsEvent.message</code></a></li></ul></li><li><a href="#sqsevent"><code>sqs(event)</code></a><ul class="toc-headings"><li><a href="#sqseventrecords"><code>SqsEvent.records</code></a></li><li><a href="#sqsrecordbody"><code>SqsRecord.body</code></a></li></ul></li><li><a href="#kinesisevent"><code>kinesis(event)</code></a><ul class="toc-headings"><li><a href="#kinesiseventrecords"><code>KinesisEvent.records</code></a></li><li><a href="#kinesisrecordjsondata"><code>KinesisRecord.jsonData</code></a></li><li><a href="#kinesisrecordtextdata"><code>KinesisRecord.textData</code></a></li><li><a href="#kinesisrecorddata"><code>KinesisRecord.data</code></a></li></ul></li><li><a href="#apigatewayreqevent"><code>apigateway.req(event)</code></a><ul class="toc-headings"><li><a href="#apigatewayeventbody"><code>ApiGatewayEvent.body</code></a></li><li><a href="#apigatewayeventheaders"><code>ApiGatewayEvent.headers</code></a></li><li><a href="#apigatewayeventparams"><code>ApiGatewayEvent.params</code></a></li></ul></li><li><a href="#apigatewayresoutput-statuscode-200-headers"><code>apigateway.res(output, statusCode = 200, headers = {})</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/laconia.svg" alt="Laconia" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/introduction/getting-started">Getting Started</a><a href="/docs/en/introduction/core-concepts">Core Concepts</a><a href="/docs/en/api/intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/laconia" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://gitter.im/laconiajs/laconia">Chat</a></div><div><h5>More</h5><a href="https://github.com/laconiajs/laconia">GitHub</a><a class="github-button" href="https://github.com/laconiajs/laconia" data-icon="octicon-star" data-count-href="/laconiajs/laconia/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Wisen Tanasa</section><section class="copyright">Logo designed by Suzie Nam</section></footer></div></body></html>
