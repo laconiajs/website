@@ -19,7 +19,7 @@ Example:
 const config = require("@laconia/config");
 const laconia = require("@laconia/core");
 
-const app = async ({ someSecret }) => {
+const app = async (input, { someSecret }) => {
   /* logic */
 };
 

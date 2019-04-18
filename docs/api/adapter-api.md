@@ -15,8 +15,6 @@ Creates a new Adapter for API Gateway.
   - `inputType = "body"`
     - Supported values are: `body`, `params`
     - Determines what should the application receive as an input
-  - `includeInputHeaders = false`
-    - Set to true to receive `inputHeaders` parameter in your application
   - `responseStatusCode = 200`
     - The status code that the Lambda should return in successful execution
   - `responseAdditionalHeaders`
@@ -31,9 +29,10 @@ Creates a new Adapter for API Gateway.
 Example:
 
 ```js
+// Creating a new adapter
+const app = params => console.log(params);
 const adapter = apigateway({
-  inputType: "params",
-  includeInputHeaders: true
+  inputType: "params"
 });
 exports.handler = laconia(adapter(app));
 

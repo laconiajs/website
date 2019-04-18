@@ -7,7 +7,7 @@ sidebar_label: middleware-lambda-warmer
 ## `lambdaWarmer(handler)`
 
 Creates a new middleware that bypasses Lambda execution if it is a warm up event
-from lambda-warmer library.
+from [lambda-warmer](https://github.com/jeremydaly/lambda-warmer) library.
 
 ```js
 const lambdaWarmer = require("@laconia/middleware-lambda-warmer")();

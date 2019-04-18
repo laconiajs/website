@@ -10,9 +10,9 @@ An AWS Lambda handler function is a single entry point for both injecting
 dependencies and function execution. In non-serverless development, you can and
 will normally only focus on the latter. This brings a unique challenge to AWS
 Lambda development as it is very difficult to test a handler function when it is
-responsible for doing both the object creations and the application run.
-@laconia/core is a simple dependency injection framework for your Lambda code,
-hence solving this problem for you.
+responsible for doing both the object creations and the application run. The
+[`core`](api/core.md) package is a simple dependency injection framework for
+your Lambda code, hence solving this problem for you.
 
 Laconia explicitly splits the responsibility of the object creations and Lambda
 function execution. Laconia also provides a simple way for you to execute your

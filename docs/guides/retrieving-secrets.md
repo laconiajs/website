@@ -13,7 +13,8 @@ migrating your secrets to AWS Secrets manager.
 
 ## Retrieving secrets from SSM
 
-A secret can be retrieved in Laconia by using the `config` package:
+A secret can be retrieved in Laconia by using the [`config`](api/config.md)
+package:
 
 ```js
 /**
@@ -24,18 +25,19 @@ const config = require("@laconia/config");
 const laconia = require("@laconia/core");
 
 // By convention, the name of the variable is derived by the environment variable name
-const app = async ({ someSecret }) => {
+const app = async (input, { someSecret }) => {
   /* logic */
 };
 
 exports.handler = laconia(app).register(config.envVarInstances());
 ```
 
-## Injecting your secret to a dependency
+## Injecting your secret to another object
 
 Most of the times, you would be using a secret because you'd like to talk to
 some external services. Instead of using the secret in your application, Laconia
-encourages you to create a dependency that uses this secret:
+encourages you to create a service that uses this secret. You can do this by
+chaining your factories:
 
 ```js
 /**
@@ -49,7 +51,7 @@ const instances = ({ mySecret }) => ({
   externalService: new MyService(mySecret)
 });
 
-const app = async ({ externalService }) => {
+const app = async (input, { externalService }) => {
   /* logic */
 };
 

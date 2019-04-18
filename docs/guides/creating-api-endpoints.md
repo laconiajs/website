@@ -27,8 +27,8 @@ statement. This means Laconia does not support the typical semantic of `req` and
 
 As Laconia is encouraging you to design your ports first, it is likely that you
 will need to implement your own adapter. Let's take an example of an API
-endpoint for creating an arbitrary order. You can implement it with the `event`
-package like this:
+endpoint for creating an arbitrary order. You can implement it with the
+[`event`](api/event.md) package like this:
 
 ```js
 const laconia = require("@laconia/core");
@@ -95,9 +95,12 @@ const adapter = app => event => {
 ## Using built-in adapter
 
 Laconia also provides built-in adapters to handle simple adapter
-implementations. _Only use the built-in adapters when it matches with your
-application's ports_. Taking the previous example of creating an arbitrary
-order, you can use the Laconia built-in adapters like this:
+implementations. When building REST API, the [`adapter-api`](api/adapter-api.md)
+only supports GET or POST at the moment as you can only select either `body` or
+`params` input type at one time. Also, please _only use the built-in adapters
+when it matches with your application's ports_. Taking the previous example of
+creating an arbitrary order, you can use the Laconia built-in adapters like
+this:
 
 ```js
 const laconia = require("@laconia/core");

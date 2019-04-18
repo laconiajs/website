@@ -16,7 +16,7 @@ Laconia provides two ways for you to adapt AWS events into your applications:
 As Laconia is encouraging you to design your ports first, it is likely that you
 will need to implement your own adapter. Let's take a simple example of an S3
 adapter that retrieves an S3 object from S3 bucket. You can do it like so with
-the `event` package:
+the [`event`](api/event.md) package:
 
 ```js
 const laconia = require("@laconia/core");
@@ -45,4 +45,5 @@ const app = objectFromS3 => console.log(objectFromS3);
 exports.handler = laconia(s3(app));
 ```
 
-The `adapter` package is using the `event` package internally too.
+The [`adapter`](api/adapter.md) package is using the [`event`](api/event.md)
+package internally too.

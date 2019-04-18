@@ -12,8 +12,9 @@ an environment variable.
 
 ## Retrieving configuration from S3
 
-Retrieving a JSON configuration is can be done easily in Laconia. You don't have
-to worry about hitting the S3 bucket and JSON parsing it:
+Retrieving a JSON configuration is can be done easily in Laconia with the
+[`event`](api/event.md) package. You don't have to worry about hitting the S3
+bucket and JSON parsing it:
 
 ```js
 /**
@@ -23,7 +24,7 @@ to worry about hitting the S3 bucket and JSON parsing it:
 const config = require("@laconia/config");
 const laconia = require("@laconia/core");
 
-const app = async ({ myConfig }) => {
+const app = async (input, { myConfig }) => {
   /* logic */
 };
 
@@ -46,7 +47,7 @@ const config = require("@laconia/config");
 const laconia = require("@laconia/core");
 
 // false will be injected
-const app = async ({ myFeatureToggle }) => {
+const app = async (input, { myFeatureToggle }) => {
   /* logic */
 };
 

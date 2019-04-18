@@ -24,6 +24,10 @@ laconia(() => Promise.resolve("value"));
 
 // Destructure laconiaContext
 laconia((event, { dependency }) => dependency(event));
+
+// Retrieve AWS context and raw event from LaconiaContext
+// (when an adapter is used, the first parameter is not an event anymore)
+laconia((_, { event, context }) => console.log(event, context));
 ```
 
 ## `register(factory(laconiaContext), options)`
@@ -75,6 +79,14 @@ laconia(app).register(
     }
   }
 );
+
+// Turning caching off
+const app = () => {};
+laconia(app).register(() => {}, {
+  cache: {
+    enabled: false
+  }
+});
 ```
 
 ## `postProcessor(postProcessorFn(instances))`

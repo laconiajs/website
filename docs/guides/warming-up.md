@@ -17,8 +17,8 @@ Lambda execution can be bypassed in Laconia by wrapping the handler around in a
 middleware. There are two integration that is supported build-in as of the time
 of writing:
 
-- serverless-plugin-warmup
-- lambda-warmer
+- [serverless-plugin-warmup](api/middleware-serverless-plugin-warmup.md)
+- [lambda-warmer](api/middleware-lambda-warmer.md)
 
 This example below shows how you can bypass the Lambda execution when it is
 triggered by the serverless-plugin-warmup:
