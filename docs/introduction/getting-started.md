@@ -4,10 +4,9 @@ title: Getting Started with Laconia
 sidebar_label: Getting Started
 ---
 
-Laconia is an application framework for building Node.js serverless function
-based applications. Laconia shields you from the friction of serverless
-development by providing consistent architectural patterns and developer
-experience.
+Laconia is a microframework for building Node.js serverless function based
+applications. Laconia shields you from the friction of serverless development by
+providing consistent architectural patterns and developer experience.
 
 _At this point of time, only AWS is supported. Strong feedback and community
 support on this framework will help the support of other cloud providers._

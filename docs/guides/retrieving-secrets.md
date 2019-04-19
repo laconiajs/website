@@ -8,7 +8,7 @@ sidebar_label: Retrieving Secrets
 
 Laconia encourages you to define the path to your SSM secret string from AWS
 Lambda environment variables. This is important as your application code must
-not change regardless of where your secret is stored, for example if you are
+not change regardless of where your secret is stored, for example, if you are
 migrating your secrets to AWS Secrets manager.
 
 ## Retrieving secrets from SSM

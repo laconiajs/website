@@ -15,13 +15,13 @@ provides two ways for you to adapt API Gateway events into your applications:
 
 ## The principles
 
-Laconia encourages single purpose function, which means most of your routing
+Laconia encourages single-purpose functions, which means most of your routing
 needs must be defined in API Gateway instead of Lambda.
 
-Incoming events should be able to be treated with plain function. Requests that
-are coming in is function arguments, response that goes out is a `return`
-statement. This means Laconia does not support the typical semantic of `req` and
-`res` from other web frameworks like Express.
+Incoming events should be able to be treated with plain function. The requests
+that are coming in are function arguments, the response that goes out is a
+`return` statement. This means Laconia does not support the typical semantic of
+`req` and `res` from other web frameworks like Express.
 
 ## Creating an adapter
 

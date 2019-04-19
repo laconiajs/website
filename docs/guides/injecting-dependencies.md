@@ -37,7 +37,7 @@ your application.
 ## Chaining injection
 
 It is possible to chain your injection in Laconia by calling `register` multiple
-times. Each of the factory that you register will be called sequentially, and
+times. Each of the factories that you register will be called sequentially, and
 the next factories will be able to access the instances created by the previous
 factories.
 
@@ -68,7 +68,7 @@ exports.handler = laconia(app).register([factory1, factory2]);
 
 ## Turning caching off
 
-Factories registered to Laconia are cached by default. This means, the factories
+Factories registered to Laconia are cached by default. This means the factories
 will not be called twice if the Lambda instance is being reused. Due to various
 reason, you might want to turn this off. This can be turned off by passing an
 option to `register`.

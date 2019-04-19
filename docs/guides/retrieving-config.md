@@ -7,7 +7,7 @@ sidebar_label: Retrieving Config
 ## Overview
 
 Your application would often have a dynamic behaviour that you would like to
-externally. This can be a config you store in S3, or in simple case, stored as
+externally. This can be a config you store in S3, or in a simple case, stored as
 an environment variable.
 
 ## Retrieving configuration from S3

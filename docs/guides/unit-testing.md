@@ -5,7 +5,7 @@ sidebar_label: Unit Testing
 ---
 
 As your dependencies are made available via plain Object properties from
-LaconiaContext, you will be able to easy inject your dependencies without
+LaconiaContext, you will be able to easily inject your dependencies without
 involving Laconia.
 
 Lambda handler code:

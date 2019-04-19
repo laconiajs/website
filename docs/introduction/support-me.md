@@ -11,6 +11,7 @@ people and community. As I'm motivated to create something that's useful for
 people, I'm finding it helpful to get any kind of feedback, which you can do by
 any of the following:
 
+- First, don't be shy
 - Be involved in the community! Feel free to chat or ask questions at
   [gitter](https://gitter.im/laconiajs/laconia)
 - If you find something wrong, missing, or might be helpful, feel free raise an
