@@ -5,35 +5,37 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
+const React = require("react");
 
-const CompLibrary = require('../../core/CompLibrary.js');
+const CompLibrary = require("../../core/CompLibrary.js");
 
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
 function Help(props) {
-  const {config: siteConfig, language = ''} = props;
-  const {baseUrl, docsUrl} = siteConfig;
-  const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-  const langPart = `${language ? `${language}/` : ''}`;
+  const { config: siteConfig, language = "" } = props;
+  const { baseUrl, docsUrl } = siteConfig;
+  const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
+  const langPart = `${language ? `${language}/` : ""}`;
   const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
   const supportLinks = [
     {
-      content: `Learn more using the [documentation on this site.](${docUrl(
-        'doc1.html',
+      content: `Learn more about Laconia using the [documentation on this site.](${docUrl(
+        "introduction/getting-started"
       )})`,
-      title: 'Browse Docs',
+      title: "Browse Docs"
     },
     {
-      content: 'Ask questions about the documentation and project',
-      title: 'Join the community',
+      content:
+        "You can join the conversation on [gitter](https://gitter.im/laconiajs/laconia) for getting help.",
+      title: "Chat"
     },
     {
-      content: "Find out what's new with this project",
-      title: 'Stay up to date',
-    },
+      content:
+        "Browse and submit [issues](https://github.com/laconiajs/laconia/issues) or [pull requests](https://github.com/laconiajs/laconia/pulls) for bugs you find or any new features you may want implemented.",
+      title: "GitHub"
+    }
   ];
 
   return (
@@ -43,7 +45,10 @@ function Help(props) {
           <header className="postHeader">
             <h1>Need help?</h1>
           </header>
-          <p>This project is maintained by a dedicated group of people.</p>
+          <p>
+            If you need help with Laconia, you can try one of the mechanisms
+            below.
+          </p>
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>
       </Container>
