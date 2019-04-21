@@ -56,6 +56,7 @@ const siteConfig = {
     primaryColor: "#23635e",
     secondaryColor: "#2bb9af"
   },
+  editUrl: "https://github.com/laconiajs/website/edit/master/docs/",
 
   /* Custom fonts for website */
   /*
