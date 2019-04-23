@@ -22,7 +22,7 @@ technologies should be treated as such. Laconia also takes the _Framework are
 details_ approach from the Clean Architecture book by Robert C. Martin. There
 are no Laconia objects to be derived for your application to work.
 
-## Set serverless design principles and best practices the default
+## Set serverless design principles and best practices as the default
 
 The design principles and best practices for serverless architecture are
 maturing. Laconia strives to make them adopted by default.
