@@ -13,7 +13,7 @@ Example:
 
 ```js
 /**
- * LambdaEnvironment variables:
+ * Lambda Environment variables:
  * - LACONIA_CONFIG_SOME_SECRET: ssm://path/to/secret
  */
 const config = require("@laconia/config");

@@ -25,7 +25,7 @@ invoker and invoke your Lambda through it like so:
 
 ```js
 /**
- * LambdaEnvironment variables:
+ * Lambda Environment variables:
  * - LACONIA_INVOKER_CALL_CAPTURE_CARD_PAYMENT_LAMBDA: capture-card-payment-lambda-name
  */
 

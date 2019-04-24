@@ -6,7 +6,7 @@ sidebar_label: Long Running Tasks
 
 ## Overview
 
-AWS Lambda maximum execution duration per request is 300 seconds, hence it is
+AWS Lambda maximum execution duration per request is 15 minutes, hence it is
 impossible to utilise a Lambda to execute a long-running task.
 [`batch`](api/batch.md) handles your batch processing needs by providing a
 beautifully designed API which abstracts the time limitation problem.

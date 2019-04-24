@@ -18,7 +18,7 @@ bucket and JSON parsing it:
 
 ```js
 /**
- * LambdaEnvironment variables:
+ * Lambda Environment variables:
  * - LACONIA_CONFIG_MY_CONFIG: s3:mybucket/dir/config.json
  */
 const config = require("@laconia/config");
@@ -40,7 +40,7 @@ boolean type.
 
 ```js
 /**
- * LambdaEnvironment variables:
+ * Lambda Environment variables:
  * - LACONIA_CONFIG_MY_FEATURE_TOGGLE: false
  */
 const config = require("@laconia/config");
