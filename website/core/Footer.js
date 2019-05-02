@@ -63,24 +63,24 @@ class Footer extends React.Component {
               User Showcase
             </a> */}
             <a
-              href="https://stackoverflow.com/questions/tagged/laconia"
+              href="https://stackoverflow.com/questions/tagged/laconiajs"
               target="_blank"
               rel="noreferrer noopener"
             >
               Stack Overflow
             </a>
             <a href="https://gitter.im/laconiajs/laconia">Chat</a>
-            {/* <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Twitter
-            </a> */}
           </div>
           <div>
             <h5>More</h5>
             {/* <a href={`${this.props.config.baseUrl}blog`}>Blog</a> */}
+            <a
+              href="https://twitter.com/laconiajs"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Twitter
+            </a>
             <a href={this.props.config.repoUrl}>GitHub</a>
             <a
               className="github-button"
