@@ -97,7 +97,12 @@ class Footer extends React.Component {
         </section>
 
         <section className="copyright">{this.props.config.copyright}</section>
-        <section className="copyright">Logo designed by Suzie Nam</section>
+        <section className="copyright">
+          Logo designed by&nbsp;
+          <a href="https://www.linkedin.com/in/suzie-nam-471980b7/">
+            Suzie Nam
+          </a>
+        </section>
       </footer>
     );
   }
