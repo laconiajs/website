@@ -70,8 +70,10 @@ bucket and JSON parsing it:</p>
 <span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@laconia/config"</span>);
 <span class="hljs-keyword">const</span> laconia = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@laconia/core"</span>);
 
+<span class="hljs-comment">// By convention, the name of the variable `myConfig` is derived by</span>
+<span class="hljs-comment">// the environment variable name `LACONIA_CONFIG_MY_CONFIG`</span>
 <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">async</span> (input, { myConfig }) =&gt; {
-  <span class="hljs-comment">/* logic */</span>
+  <span class="hljs-built_in">console</span>.log(myConfig); <span class="hljs-comment">// Parsed JSON from S3 printed to the console</span>
 };
 
 exports.handler = laconia(app).register(config.envVarInstances());
