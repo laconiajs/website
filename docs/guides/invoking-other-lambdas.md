@@ -16,7 +16,7 @@ makes this easy by:
   returned by Lambda invocation
 - Set the FunctionError object's name and message thrown based on the error
   returned by Lambda invocation
-- Throwing an error when statusCode returned is not expected
+- Throwing an error when statusCode returned is not a success code
 
 ## Guide
 
@@ -32,6 +32,8 @@ invoker and invoke your Lambda through it like so:
 const invoker = require("@laconia/invoker");
 const laconia = require("@laconia/core");
 
+// By convention, the name of the variable `captureCardPaymentLambda` is derived by
+// the environment variable name `LACONIA_INVOKER_CALL_CAPTURE_CARD_PAYMENT_LAMBDA`
 const app = async (input, { captureCardPaymentLambda }) => {
   const parameter = { transactionId: 1 };
   // Waits for capture-card-payment-lambda-name
@@ -43,5 +45,5 @@ exports.handler = laconia(app).register(invoker.envVarInstances());
 ```
 
 The invoker also supports `Event` invocation type (asynchronous Lambda
-execution), which can be called replacing `requestResponse` with
+execution), which can be called by replacing `requestResponse` with
 `fireAndForget`.

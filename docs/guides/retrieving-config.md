@@ -24,8 +24,10 @@ bucket and JSON parsing it:
 const config = require("@laconia/config");
 const laconia = require("@laconia/core");
 
+// By convention, the name of the variable `myConfig` is derived by
+// the environment variable name `LACONIA_CONFIG_MY_CONFIG`
 const app = async (input, { myConfig }) => {
-  /* logic */
+  console.log(myConfig); // Parsed JSON from S3 printed to the console
 };
 
 exports.handler = laconia(app).register(config.envVarInstances());

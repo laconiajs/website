@@ -24,9 +24,10 @@ package:
 const config = require("@laconia/config");
 const laconia = require("@laconia/core");
 
-// By convention, the name of the variable is derived by the environment variable name
+// By convention, the name of the variable `someSecret` is derived by
+// the environment variable name `LACONIA_CONFIG_SOME_SECRET`
 const app = async (input, { someSecret }) => {
-  /* logic */
+  console.log(someSecret); // Prints the SecretString that has been retrieved from SSM
 };
 
 exports.handler = laconia(app).register(config.envVarInstances());
