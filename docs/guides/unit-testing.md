@@ -16,6 +16,7 @@ const instances = ({ env }) => ({
 });
 
 exports.app = async (event, { orderRepository }) => {
+  const order = event;
   await orderRepository.save(order);
 };
 
