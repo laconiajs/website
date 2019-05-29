@@ -94,6 +94,7 @@ this example shows what pattern Laconia encourages you to develop in:</p>
 <span class="hljs-comment">// Your application core, which is cloud agnostic</span>
 <span class="hljs-comment">// Dependencies made available via destructuring</span>
 <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">async</span> (input, { orderRepository, idGenerator }) =&gt; {
+  <span class="hljs-keyword">const</span> order = input;
   <span class="hljs-keyword">await</span> orderRepository.save(order);
 };
 

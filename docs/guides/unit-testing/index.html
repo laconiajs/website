@@ -64,6 +64,7 @@ involving Laconia.</p>
 });
 
 exports.app = <span class="hljs-keyword">async</span> (event, { orderRepository }) =&gt; {
+  <span class="hljs-keyword">const</span> order = event;
   <span class="hljs-keyword">await</span> orderRepository.save(order);
 };
 
