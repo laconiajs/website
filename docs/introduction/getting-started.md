@@ -52,6 +52,7 @@ const instances = ({ env }) => ({
 // Your application core, which is cloud agnostic
 // Dependencies made available via destructuring
 const app = async (input, { orderRepository, idGenerator }) => {
+  const order = input;
   await orderRepository.save(order);
 };
 
