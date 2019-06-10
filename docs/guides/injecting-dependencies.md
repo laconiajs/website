@@ -87,12 +87,19 @@ exports.handler = laconia(app).register(instances, {
 ## Getting AWS original parameters
 
 As Laconia is changing your handler signature from `event, context, callback` to
-`event, LaconiaContext`, you might wonder on how you can retrieve the original
-AWS context or event. Laconia would recommend not using `context` or `event` in
-your application core as this is AWS specific. These variables are however still
-available to be accessed if you need it via LaconiaContext with key `context`
-and `event`.
+`input, LaconiaContext`, you might wonder on how you can retrieve the original
+AWS context or event. These variables are available to be accessed via
+LaconiaContext with key `context` and `event`. Laconia would recommend not using
+`context` or `event` in your application core as this is AWS specific, and use
+them in your adapter instead.
 
 ```js
-laconia((event, { context }) => {}); // AWS context
+const convertEventToInput = () => {};
+const app = async input => {};
+const adapter = app => (event, laconiaContext) => {
+  laconiaContext.context.callbackWaitsForEmptyEventLoop = false;
+  return app(convertEventToInput(event), laconiaContext);
+};
+
+exports.handler = laconia(adapter(app));
 ```
