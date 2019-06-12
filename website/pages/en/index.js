@@ -13,6 +13,16 @@ const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+const QUOTES = [
+  {
+    image: "img/quotes/lucas-woodward.jpg",
+    title: "Lucas Woodward",
+    content:
+      "Laconia has been a great library to allow me to migrate business logic from a conventional container to serverless functions and still be able to adhere to SOLID principles and clean architectural patterns. Being specifically designed for serverless functions, it has also meant that they can still stay lightweight and versatile too.",
+    imageAlign: "top"
+  }
+];
+
 class HomeSplash extends React.Component {
   render() {
     const { siteConfig, language = "" } = this.props;
@@ -144,6 +154,8 @@ class Index extends React.Component {
         ]}
       </Block>
     );
+
+    const Quotes = () => <Block layout="threeColumn">{QUOTES}</Block>;
 
     const LearnHow = () => (
       <Block background="light">
