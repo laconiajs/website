@@ -12,7 +12,13 @@ class Footer extends React.Component {
     const baseUrl = this.props.config.baseUrl;
     const docsUrl = this.props.config.docsUrl;
     const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
-    const langPart = `${language ? `${language}/` : ""}`;
+    /**
+     * A bug from docusaurus where if I'm at page https://laconiajs.io/docs/introduction/getting-started,
+     * the Footer will show https://laconiajs.io/docs/en/introduction/getting-started
+     * (notice the /en/ in the URL)
+     */
+    // const langPart = `${language ? `${language}/` : ""}`;
+    const langPart = "";
     return `${baseUrl}${docsPart}${langPart}${doc}`;
   }
 
