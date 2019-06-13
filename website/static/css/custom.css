@@ -14,3 +14,18 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.showcaseSection .logos .link,
+.productShowcaseSection .logos .link {
+  display: flex;
+  flex-direction: column;
+}
+
+.showcaseSection .logos .caption,
+.productShowcaseSection .logos .caption {
+  margin-top: -1em;
+}
+
+.showcaseSection .logos {
+  margin-bottom: 5em;
+}

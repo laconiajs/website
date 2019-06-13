@@ -13,6 +13,8 @@ const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+const User = require(process.cwd() + "/core/User");
+
 const QUOTES = [
   {
     image: "img/quotes/lucas-woodward.jpg",
@@ -229,21 +231,20 @@ class Index extends React.Component {
 
       const showcase = siteConfig.users
         .filter(user => user.pinned)
-        .map(user => (
-          <a href={user.infoLink} key={user.infoLink}>
-            <img src={user.image} alt={user.caption} title={user.caption} />
-          </a>
-        ));
+        .map(user => <User user={user} key={user.infoLink} />);
 
       const pageUrl = page => baseUrl + (language ? `${language}/` : "") + page;
 
       return (
         <div className="productShowcaseSection paddingBottom">
-          <h2>Who is Using This?</h2>
-          <p>This project is used by all these people</p>
+          <h2>Who is using Laconia?</h2>
+          <p>
+            Laconia is helping companies and products building on top of
+            serverless technologies
+          </p>
           <div className="logos">{showcase}</div>
           <div className="more-users">
-            <a className="button" href={pageUrl("users.html")}>
+            <a className="button" href={pageUrl("users")}>
               More {siteConfig.title} Users
             </a>
           </div>
@@ -259,8 +260,9 @@ class Index extends React.Component {
           {/*<FeatureCallout />
           <LearnHow />
           <TryOut />
-          <Description />
-          <Showcase /> */}
+          <Description /> */}
+          {/* <Showcase /> */}
+          {/* <Quotes /> */}
         </div>
       </div>
     );
