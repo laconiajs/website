@@ -11,11 +11,9 @@
 // List of projects/orgs using your project for the users page.
 const users = [
   {
-    caption: "User1",
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: "/img/docusaurus.svg",
-    infoLink: "https://www.facebook.com",
+    caption: "Sainsbury's",
+    image: "/img/users/sainsburys.jpg",
+    infoLink: "https://www.sainsburys.co.uk/",
     pinned: true
   }
 ];
@@ -40,7 +38,8 @@ const siteConfig = {
   headerLinks: [
     { doc: "introduction/getting-started", label: "Getting Started" },
     { doc: "api/intro", label: "API" },
-    { page: "help", label: "Help" }
+    { page: "help", label: "Help" },
+    { page: "users", label: "Users" }
   ],
 
   // If you have users set above, you add it here:
