@@ -77,6 +77,6 @@ There a couple of things to notice in the diagram:
 1. **Laconia Handler** is the Laconia's implementation of the **Handler** that
    we have written above. It does a little bit more than that of course.
 2. Laconia encourages you to design your application's ports first. This means
-   the it's likely that you will need to create your own **Primary Adapters**
+   that it's quite likely that you will need to create your own **Primary Adapters**
    and **Secondary Adapters**. Laconia also provides some built-in adapters that
    you can use if it matches your ports.
