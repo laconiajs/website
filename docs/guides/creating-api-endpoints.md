@@ -116,7 +116,7 @@ const apigateway = adapterApi.apigateway({
   inputType: "body",
   errorMappings: {
     ".*": error => ({
-      body: { error: { message: err.message } },
+      body: { error: { message: error.message } },
       statusCode: 500
     })
   }
