@@ -196,7 +196,10 @@ You can specify the following output:
   - Response Content-Type will be set to text/plain
   - Your app output will automatically be JSON stringified
 - Promise that wraps any of the above
-- Buffer / Stream - Unsupported yet
+- Buffer
+  - Response Content-Type will be set to application/octet-stream
+  - You app output will automatically be base64
+- Stream - Unsupported yet
 
 Example:
 
