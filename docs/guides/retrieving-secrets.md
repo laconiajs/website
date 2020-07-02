@@ -16,7 +16,7 @@ Function.
 
 By using Laconia config to retrieve secrets you get three benefits
 
-* The ammount of code required to retrieve secrets is reduced.
+* The amount of code required to retrieve secrets is reduced.
 * Secrets can be migrated between services without the code changing.
 * You can unit test the function without having to mock out the code fetching the secrets.
 
