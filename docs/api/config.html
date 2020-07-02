@@ -81,6 +81,7 @@ exports.handler = laconia(app).register(config.envVarInstances());
 </thead>
 <tbody>
 <tr><td>ssm</td><td>ssm:[parameter name]</td><td>ssm:/path/to/my/secret</td><td>Retrieves parameters and secrets from AWS SSM</td></tr>
+<tr><td>secretsManager</td><td>secretsManager:[secret id]</td><td>secretsManager:/path/to/my/secret</td><td>Retrieves parameters and secrets from AWS Secrets Manager</td></tr>
 <tr><td>s3</td><td>s3:[bucket]/[key].json</td><td>s3:bucketName/path/to/config.json</td><td>Retrieves application config from S3</td></tr>
 <tr><td>boolean</td><td>boolean:[truthy / falsy]</td><td>boolean:off</td><td>Converts truthy/falsy values to boolean</td></tr>
 <tr><td>integer</td><td>integer:[an integer]</td><td>integer:9000</td><td>Converts integer values to true JS integers</td></tr>
