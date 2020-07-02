@@ -14,7 +14,7 @@ Function.
 
 ## Benefits
 
-By using Laconia config to retrieve secrets you get three benefits
+By using Laconia config to retrieve secrets you get three benefits:
 
 * The amount of code required to retrieve secrets is reduced.
 * Secrets can be migrated between services without the code changing.
