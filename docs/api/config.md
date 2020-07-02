@@ -32,13 +32,14 @@ Key: `LACONIA_CONFIG_[VARIABLE_NAME]`
 
 Value:
 
-| Prefix  | Format                   | Example                           | Description                                   |
-| ------- | ------------------------ | --------------------------------- | --------------------------------------------- |
-| ssm     | ssm:[parameter name]     | ssm:/path/to/my/secret            | Retrieves parameters and secrets from AWS SSM |
-| s3      | s3:[bucket]/[key].json   | s3:bucketName/path/to/config.json | Retrieves application config from S3          |
-| boolean | boolean:[truthy / falsy] | boolean:off                       | Converts truthy/falsy values to boolean       |
-| integer | integer:[an integer]     | integer:9000                      | Converts integer values to true JS integers   |
-| float   | float:[a float]          | float:1.345                       | Converts float values to true JS floats       |
+| Prefix         | Format                     | Example                           | Description                                               |
+| -------------- | -------------------------- | --------------------------------- | --------------------------------------------------------- |
+| ssm            | ssm:[parameter name]       | ssm:/path/to/my/secret            | Retrieves parameters and secrets from AWS SSM             |
+| secretsManager | secretsManager:[secret id] | secretsManager:/path/to/my/secret | Retrieves parameters and secrets from AWS Secrets Manager |
+| s3             | s3:[bucket]/[key].json     | s3:bucketName/path/to/config.json | Retrieves application config from S3                      |
+| boolean        | boolean:[truthy / falsy]   | boolean:off                       | Converts truthy/falsy values to boolean                   |
+| integer        | integer:[an integer]       | integer:9000                      | Converts integer values to true JS integers               |
+| float          | float:[a float]            | float:1.345                       | Converts float values to true JS floats                   |
 
 With `boolean` config, these are the falsy values which will be converted to
 `false`. If none of these values match, it will be converted to `true`:
