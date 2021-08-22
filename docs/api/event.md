@@ -51,7 +51,7 @@ Creates a read stream for the object that has triggered the Lambda.
 
 ### `S3Event.getText()`
 
-Retrieves the object from the S3 bucket that has triggered the Lambda and
+Retrieves the object from the S3 bucket that has triggered the Lambda, and
 parses it into a string.
 
 
