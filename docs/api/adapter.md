@@ -15,7 +15,7 @@ event from S3, then convert the object into your application input based on the
 
 - `options`:
   - `inputType = "object"`
-    - Supported values are: `object`, `stream`
+    - Supported values are: `object`, `stream`, and `text`
     - Determines what should the application receive as an input
 
 Example:
