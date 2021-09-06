@@ -49,6 +49,12 @@ parses it into JSON.
 
 Creates a read stream for the object that has triggered the Lambda.
 
+### `S3Event.getText()`
+
+Retrieves the object from the S3 bucket that has triggered the Lambda, and
+parses it into a string.
+
+
 ## `sns(event)`
 
 Parses and contain the incoming SNS event into `SnsEvent` object.
