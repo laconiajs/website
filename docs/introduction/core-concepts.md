@@ -57,7 +57,7 @@ const adapter = app => (event, dependencies) =>
 const handler = adapter => (event, context, callback) =>
   adapter(event, createDependencies());
 
-const handler = handler(adapter(app));
+exports.handler = handler(adapter(app));
 ```
 
 You now have different functions, each of them with a clear responsibility. It
