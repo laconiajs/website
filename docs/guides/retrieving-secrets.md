@@ -82,8 +82,8 @@ chaining your factories:
 const config = require("@laconia/config");
 const laconia = require("@laconia/core");
 
-const instances = ({ mySecret }) => ({
-  externalService: new MyService(mySecret)
+const instances = ({ someSecret }) => ({
+  externalService: new MyService(someSecret)
 });
 
 const app = async (input, { externalService }) => {
